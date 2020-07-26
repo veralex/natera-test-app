@@ -1,0 +1,54 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Optio quam dignissimos voluptatibus, magni molestiae suscipit. Animi explicabo exercitationem libero voluptas?",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam vero pariatur delectus, commodi nemo eligendi quos placeat nesciunt in eum tempore ad quo ab? Magni magnam pariatur aut hic quod.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti atque eum aperiam. Harum, doloribus inventore! Quos temporibus vel, mollitia optio totam, iste itaque placeat a repellendus possimus similique asperiores!",
+            "published": true,
+            "author_id": "1488",
+            "image": null
+        },
+        {
+            "id": 2,
+            "title": "Tempore odio",
+            "body": "Atque quisquam reiciendis distinctio nobis at ipsum ullam esse maiores velit impedit labore libero, quaerat dolor reprehenderit? Pariatur, fugit nihil ex numquam, placeat nostrum excepturi et aliquam aut voluptatibus quam expedita! Corporis.\n\nBeatae sapiente tempore, repudiandae eius, enim fuga reprehenderit tempora dignissimos provident molestiae consequatur, suscipit nihil dolorum nemo? Autem eum, illum in vel veniam eligendi blanditiis exercitationem eos quis voluptatum, excepturi minima eius.",
+            "published": false,
+            "author_id": "1489",
+            "image": "Happy-Business-Computer-People-1.png"
+        },
+        {
+            "id": 3,
+            "title": "Mollitia eaque culpa amet perferendis esse nulla facilis nemo, adipisci sit odit",
+            "body": "Voluptatum nesciunt suscipit aperiam saepe vitae eius doloremque nemo in! Corrupti tenetur inventore natus dicta voluptates excepturi eligendi",
+            "published": true,
+            "author_id": "1490",
+            "image": null
+        }
+    ],
+    "users": [
+        {
+            "id": "1488",
+            "name": "Sierra Ferguson",
+            "title": "TPM",
+            "image": "face00001.png"
+        },
+        {
+            "id": "1489",
+            "name": "Lina Lake",
+            "title": "Head of manager dept.",
+            "image": "face00002.png"
+        },
+        {
+            "id": "1490",
+            "name": "Glen Moore",
+            "title": "Head of QA dept.",
+            "image": "face00003.png"
+        },
+        {
+            "id": "1491",
+            "name": "George Fields",
+            "title": "Head of QA dept.",
+            "image": "face00004.png"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+.overlay-show {
+    animation: 0.25s overlay;
+}
+.overlay-hide {
+    animation: 0.2s overlay 0.2s reverse;
+}
+
+.modal-show {
+    animation: 0.2s modal-show;
+    height: 524px;
+    top: 50px;
+}
+
+.modal-hide {
+    animation: 0.2s modal-show reverse;
+}
+.modal-hide.div {
+    display: none;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.3;
+    }
+}
+
+@keyframes modal-show {
+    from {
+        height: 0px;
+        top: 574px;
+    }
+    to {
+        height: 524px;
+        top: 50px;
+    }
+}
