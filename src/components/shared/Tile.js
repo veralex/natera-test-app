@@ -7,6 +7,7 @@ const TileWrapper = styled.div`
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     width: 100%;
+    height: 190px
 `;
 
 const Tile = props => {

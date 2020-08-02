@@ -1,51 +1,45 @@
 import React, { isValidElement } from 'react';
+import styled from 'styled-components';
 import { createBrowserHistory } from 'history';
-import { makeStyles } from '@material-ui/styles';
 import { Router, Route, NavLink, Switch } from 'react-router-dom';
 
-const useStyles = makeStyles(
-    {
-        menu: {
-            display: 'flex',
-            justifyContent: 'space-between',
-            listStyleType: 'none',
-            padding: '0px',
-            marginTop: '48px',
-        },
-        link: {
-            fontSize: '20px',
-            fontWeight: 'bold',
-            fontStyle: 'normal',
-            lineHeight: '24px',
-            paddingBottom: '6px',
-            color: 'rgba(255, 255, 255, 0.5)',
-            borderBottom: 'none',
-            textDecoration: 'none',
-        },
-        activeLink: {
-            color: '#FFFFFF',
-            borderBottom: '3px solid #FFFFFF',
-        },
-    },
-    { name: 'HTMenu' }
-);
+const StyledMenu = styled.ul`
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 48px;
+    .nav-link {
+        font-size: 20px;
+        font-weight: bold;
+        font-style: normal;
+        line-height: 24px;
+        padding-bottom: 6p;
+        color: rgba(255, 255, 255, 0.5);
+        border-bottom: none;
+        text-decoration: none;
+    }
+    .nav-link-active {
+        color: #ffffff;
+        border-bottom: 3px solid #ffffff;
+    }
+`;
 
 const AppRouter = props => {
     const { children } = props;
     const history = createBrowserHistory();
-    const classes = useStyles();
 
     return (
         <Router history={history}>
             <nav>
-                <ul className={classes.menu}>
+                <StyledMenu >
                     {React.Children.map(children, child =>
                         isValidElement(child) ? (
                             <li key={child.props.resource}>
                                 <NavLink
                                     to={`/${child.props.resource}`}
-                                    className={classes.link}
-                                    activeClassName={classes.activeLink}
+                                    className='nav-link'
+                                    activeClassName='nav-link-active'
                                     exact
                                 >
                                     {child.props.label}
@@ -53,7 +47,7 @@ const AppRouter = props => {
                             </li>
                         ) : null
                     )}
-                </ul>
+                </StyledMenu>
             </nav>
             <Switch>
                 {React.Children.map(children, child =>

@@ -7,7 +7,7 @@ import './post.css';
 const Wrapper = styled.div`
     position: absolute;
     width: 100%;
-    top: 152px;
+    top: 200px;
 `;
 
 const GridWrapper = styled.div`
@@ -16,10 +16,6 @@ const GridWrapper = styled.div`
     gap: 20px;
     grid-auto-rows: auto;
     overflow: hidden;
-`;
-
-const PostTile = styled(Tile)`
-    height: 190px;
 `;
 
 export default props => {
@@ -46,13 +42,13 @@ export default props => {
                 <SectionHeader>Highlights</SectionHeader>
                 <GridWrapper>
                     {posts.slice(-11).map(post => (
-                        <PostTile key={post.id}>
+                        <Tile key={post.id}>
                             <Post post={post} action="edit" />
-                        </PostTile>
+                        </Tile>
                     ))}
-                    <PostTile className={slide ? 'create-post-slide' : null}>
+                    <Tile className={slide ? 'create-post-slide' : null}>
                         <Post action="create" />
-                    </PostTile>
+                    </Tile>
                 </GridWrapper>
             </Wrapper>
         </>

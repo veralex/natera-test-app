@@ -8,9 +8,9 @@ const Wrapper = styled.div`
     align-items: center;
 `;
 
-const Label = styled.span`
-    font-family: h4;
+const Label = styled.h4`
     font-size: 14px;
+    font-weight: 400;
     margin-left: 20px;
     color: ${props => props.theme.inputText};
 `;

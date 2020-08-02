@@ -63,7 +63,8 @@ const PostCreateForm = ({ createPost, cancel }) => {
         body: '',
         author_id: '',
         author: null,
-        image: '',
+        image: null,
+        file: '',
         published: false,
     };
     const [post, setPost] = useState(initialState);
@@ -73,7 +74,9 @@ const PostCreateForm = ({ createPost, cancel }) => {
     };
 
     const hadleFileUpload = file => {
-        setPost({ ...post, image: file });
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => setPost({ ...post, file, image: reader.result });
     };
 
     const handleSelectAuthor = value => {
@@ -123,7 +126,7 @@ const PostCreateForm = ({ createPost, cancel }) => {
                     label="Photo"
                     name="image"
                     onChange={hadleFileUpload}
-                    value={post.image}
+                    value={post.file}
                 >
                     <FileInput />
                 </TextInput>

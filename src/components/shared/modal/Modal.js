@@ -98,7 +98,7 @@ const PostModal = ({ children }) => {
                     close
                 </CloseButton>
                 <hr />
-                <div class="modal-content-wrapper">{children}</div>
+                <div className="modal-content-wrapper">{children}</div>
             </Modal>
         </>,
         container

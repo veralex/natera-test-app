@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import Input from 'react-autocomplete';
 import { AppContext } from '../../AppContext';
 import { InputWrapper } from '..';
@@ -12,7 +12,13 @@ const AutocompleteInput = ({
     source,
 }) => {
     const context = useContext(AppContext);
-    const items = context[source];
+    const itemsSource = context[source];
+
+    const items = useMemo(() => {
+        return value === ''
+            ? itemsSource
+            : itemsSource.filter(item => item.name.indexOf(value) !== -1);
+    }, [itemsSource, value]);
 
     return (
         <InputWrapper label={label}>

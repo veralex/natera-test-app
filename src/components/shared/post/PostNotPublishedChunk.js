@@ -6,8 +6,9 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     height: 12px;
-    position: relative;
-    top: 6px;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
 `;
 
 const Icon = styled.div`

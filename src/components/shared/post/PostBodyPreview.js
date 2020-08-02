@@ -18,6 +18,10 @@ const TextWrapper = styled.div`
 const ImageWrapper = styled.div`
     position: relative;
     width: 100%;
+    height: 100%;
+    background-image: url(${props => props.img});
+    background-position: top center;
+    background-size: cover;
     img {
         max-width: 100%;
     }
@@ -30,20 +34,20 @@ const ImageWrapper = styled.div`
 `;
 
 const PostBodyPreview = ({ post }) => {
-    const [img, setImg] = useState(null);
-    if (post.image)
+    const [img, setImg] = useState(
+        post.image?.startsWith('data:image') ? post.image : null
+    );
+    if (post.image && !img)
+        // This is a crutch that loads an image both from local file and uploaded file
         import(`../../../assets/${post.image}`).then(res =>
             setImg(res.default)
         );
     return post.image ? (
-        <ImageWrapper>
-            {img && (
-                <>
-                    <img src={img} alt={img} />
-                    <h3>{post.title}</h3>
-                </>
-            )}
-        </ImageWrapper>
+        img && (
+            <ImageWrapper img={img}>
+                <h3>{post.title}</h3>
+            </ImageWrapper>
+        )
     ) : (
         <TextWrapper>
             <h3>{post.title}</h3>

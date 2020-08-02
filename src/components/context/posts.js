@@ -32,7 +32,7 @@ export default () => {
                     {
                         ...item,
                         id: Math.max(...state.map(p => p.id)) + 1,
-                        image: item.image?.name,
+                        image: item.image,
                     },
                 ],
             }),
