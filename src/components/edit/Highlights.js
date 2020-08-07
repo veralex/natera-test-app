@@ -18,7 +18,7 @@ const GridWrapper = styled.div`
     overflow: hidden;
 `;
 
-export default props => {
+const Highlights = props => {
     const { posts } = useContext(AppContext);
     const postsToShow = posts.slice(-11);
 
@@ -54,3 +54,5 @@ export default props => {
         </>
     );
 };
+
+export { Highlights };

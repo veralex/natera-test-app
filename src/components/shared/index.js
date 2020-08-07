@@ -9,5 +9,6 @@ export * from './modal';
 // export { AutocompleteInput } from './inputs/AutocompleteInput';
 export * from './inputs';
 export * from './labels';
+export * from './projects';
 
 export { Tile, SectionHeader, Button };

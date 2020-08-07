@@ -50,5 +50,70 @@
             "title": "Head of QA dept.",
             "image": "face00004.png"
         }
+    ],
+    "projects": [
+        {
+            "id": "1",
+            "name": "Alpha project",
+            "status": 52,
+            "company": "Inceptos Hymenaeos Ltd",
+            "release_date": "Nov 12, 2019"
+        },
+        {
+            "id": "2",
+            "name": "Betha project",
+            "status": 23,
+            "company": "Nec Euismod In Company",
+            "release_date": "Dec 9, 2019"
+        },
+        {
+            "id": "3",
+            "name": "Gamma project",
+            "status": 25,
+            "company": "Erat Volutpat Tellus Ltd",
+            "release_date": "Dec 25, 2019"
+        },
+        {
+            "id": "4",
+            "name": "Sigma project",
+            "status": 48,
+            "company": "Hymenaeos Ltd",
+            "release_date": "Nov 25, 2019"
+        },
+        {
+            "id": "5",
+            "name": "Kappa project",
+            "status": 89,
+            "company": "Gessertinno Llc",
+            "release_date": "Oct 20, 2019"
+        },
+        {
+            "id": "6",
+            "name": "Omega project",
+            "status": 56,
+            "company": "Umbralora Montro",
+            "release_date": "Nov 22, 2019"
+        },
+        {
+            "id": "7",
+            "name": "Tetha project",
+            "status": 95,
+            "company": "Poprisi Company",
+            "release_date": "Oct 16, 2019"
+        },
+        {
+            "id": "9",
+            "name": "Delta project",
+            "status": 85,
+            "company": "Fergana ",
+            "release_date": "Oct 25, 2019"
+        },
+        {
+            "id": "8",
+            "name": "Epsilon project",
+            "status": 75,
+            "company": "Trast National",
+            "release_date": "Nov 1, 2019"
+        }
     ]
 }

@@ -1,5 +1,4 @@
 import Layout from './Layout';
-import Highlights from './Highlights';
 
-export { Highlights };
+export { Highlights } from './Highlights';
 export default Layout;

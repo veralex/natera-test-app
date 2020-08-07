@@ -1,10 +1,10 @@
 import React, { createContext, useState } from 'react';
-import { posts, projects } from './context';
+import { posts } from './context';
 import json from '../assets/data.json';
 
 const defaultContext = {
     users: json.users,
-    projects: [],
+    projects: json.projects,
 };
 
 const AppContext = createContext(defaultContext);
@@ -17,7 +17,6 @@ const AppProvider = props => {
     const value = {
         ...defaultContext,
         ...posts(),
-        ...projects(),
         modalOpen,
         setModalOpen,
     };
