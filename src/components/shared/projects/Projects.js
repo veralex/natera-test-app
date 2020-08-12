@@ -9,14 +9,14 @@ const TableTile = styled(Tile)`
     padding: 1.5em;
 `;
 
-const Projects = props => {
+const Projects = ({ edit }) => {
     const { projects } = useContext(AppContext);
 
     return (
         <>
             <SectionHeader>Projects</SectionHeader>
             <TableTile>
-                <ProjectsTable projects={projects} />
+                <ProjectsTable projects={projects} edit={edit} />
             </TableTile>
         </>
     );

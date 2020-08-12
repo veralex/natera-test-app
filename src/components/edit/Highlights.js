@@ -5,7 +5,7 @@ import { AppContext } from '../';
 import './post.css';
 
 const Wrapper = styled.div`
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
     top: 200px;
 `;
@@ -24,7 +24,7 @@ const Highlights = props => {
 
     const slide = postsToShow.length === 11 ? false : postsToShow.length % 4;
     useEffect(() => {
-        // It's a specific way to slide a div/ But I don't know how to
+        // It's a specific way to slide a div. But I don't know how to
         // make it better
         const element = document
             .getElementsByClassName('create-post-slide')

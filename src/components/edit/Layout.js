@@ -6,7 +6,7 @@ import { Projects } from '../shared';
 const Layout = props => (
     <>
         <Highlights />
-        <Projects />
+        <Projects edit />
     </>
 );
 

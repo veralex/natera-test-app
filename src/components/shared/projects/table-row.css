@@ -1,0 +1,12 @@
+.table-row-fading {
+    animation: 0.2s row-fading;
+}
+
+@keyframes row-fading {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
