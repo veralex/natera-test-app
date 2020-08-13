@@ -1,61 +1,11 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
+import { TextInput, FileInput, Button, AutocompleteInput, Switch } from '..';
 import {
-    SectionHeader,
-    TextInput,
-    FileInput,
-    Button,
-    AutocompleteInput,
-    Switch,
-} from '..';
-
-const Wrapper = styled.form`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    position: relative;
-    width: 100%;
-    ${SectionHeader} {
-        padding-left: 0px;
-    }
-`;
-
-const Footer = styled.div`
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`;
-
-const PostCreateHeader = styled.h1`
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 24px;
-    color: ${props => props.theme.sectionLabel};
-`;
-
-const PostCreateControl = styled.div`
-    display: flex;
-    align-items: baseline;
-    & > span {
-        margin-right: 12px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 10px;
-        line-height: 12px;
-        text-align: center;
-        color: ${props => props.theme.sectionLabel};
-    }
-    .cancel-post-create {
-        text-decoration-line: underline;
-        text-transform: uppercase;
-        &:hover {
-            cursor: pointer;
-        }
-    }
-`;
+    PostCreate,
+    PostModalFooter,
+    PostCreateHeader,
+    PostCreateControl,
+} from './styled';
 
 const PostCreateForm = ({ createPost, cancel }) => {
     const initialState = {
@@ -92,7 +42,7 @@ const PostCreateForm = ({ createPost, cancel }) => {
 
     return (
         // I used form here to make it look like a real app
-        <Wrapper
+        <PostCreate
             method="POST"
             onSubmit={e => {
                 e.preventDefault();
@@ -139,7 +89,7 @@ const PostCreateForm = ({ createPost, cancel }) => {
                     value={post.author_id}
                 />
             </div>
-            <Footer>
+            <PostModalFooter>
                 <div>
                     <Switch
                         name="published"
@@ -155,8 +105,8 @@ const PostCreateForm = ({ createPost, cancel }) => {
                     <span>or</span>
                     <Button size="large">Publish</Button>
                 </PostCreateControl>
-            </Footer>
-        </Wrapper>
+            </PostModalFooter>
+        </PostCreate>
     );
 };
 

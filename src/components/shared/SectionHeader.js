@@ -9,7 +9,6 @@ const Header = styled.div`
 const Text = styled.h1`
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
     position: absolute;
     bottom: 16px;
     color: ${props => props.theme.sectionLabel};

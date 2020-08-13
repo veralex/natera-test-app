@@ -53,6 +53,10 @@ td {
     font-family: 'Roboto';
 }
 
+h1 {
+    font-size: 1.25em;
+}
+
 #root {
     width: 100%;
     position: relative;

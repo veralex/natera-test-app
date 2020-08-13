@@ -1,8 +1,9 @@
 import React, { useContext } from 'react';
+import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Button, Modal } from '..';
+import { Button } from '..';
 import {
     PostFooterContent,
     PostHeaderContent,
@@ -11,6 +12,9 @@ import {
     PostBodyPreview,
 } from '.';
 import { AppContext } from '../..';
+import { ThemeProvider } from 'styled-components';
+
+import theme from '../../../theme';
 
 const Wrapper = styled.div`
     display: flex;
@@ -76,7 +80,7 @@ const PostLabel = styled.p`
 `;
 
 const PostComponent = ({ action, post }) => {
-    const { createPost, modalOpen, setModalOpen } = useContext(AppContext);
+    const { createPost, setModalOpen } = useContext(AppContext);
 
     return (
         <Wrapper>
@@ -117,20 +121,27 @@ const PostComponent = ({ action, post }) => {
                             className="create-post-button"
                             onClick={() => {
                                 setModalOpen(true);
+                                ReactDOM.render(
+                                    <ThemeProvider theme={theme}>
+                                        <PostCreateForm
+                                            createPost={createPost}
+                                            cancel={() => {
+                                                setModalOpen(false);
+                                                ReactDOM.unmountComponentAtNode(
+                                                    document.getElementById(
+                                                        'modal-content'
+                                                    )
+                                                );
+                                            }}
+                                            theme={theme}
+                                        />
+                                    </ThemeProvider>,
+                                    document.getElementById('modal-content')
+                                );
                             }}
                         >
                             Create
                         </Button>
-                        <Modal
-                            open={modalOpen}
-                            setOpen={setModalOpen}
-                            title="New post"
-                        >
-                            <PostCreateForm
-                                createPost={createPost}
-                                cancel={() => setModalOpen(false)}
-                            />
-                        </Modal>
                     </>
                 ) : (
                     <PostFooterContent post={post} />

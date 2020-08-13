@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import { Router, AppProvider } from './components';
 import Edit from './components/edit/Layout';
 import Dashboard from './components/dashboard/Layout';
-// import { Modal } from './components/shared';
+import { Modal } from './components/shared';
 import theme from './theme';
 
 export default () => {
@@ -14,7 +14,7 @@ export default () => {
                     <Dashboard />
                     <Edit />
                 </Router>
-                {/* <Modal /> */}
+                <Modal />
             </AppProvider>
         </ThemeProvider>
     );

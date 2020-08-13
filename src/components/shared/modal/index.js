@@ -1,3 +1,1 @@
-import { PostModal } from './Modal';
-
-export { PostModal as Modal };
+export { Modal } from './Modal';
