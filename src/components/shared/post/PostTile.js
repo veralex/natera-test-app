@@ -160,8 +160,8 @@ PostComponent.defaultProps = {
     action: 'show',
 };
 
-const Post = React.memo(PostComponent, (prevProps, nextProps) =>
+const PostTile = React.memo(PostComponent, (prevProps, nextProps) =>
     _.isEqual(prevProps, nextProps)
 );
 
-export { Post };
+export { PostTile };

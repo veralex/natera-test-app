@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import styled from 'styled-components';
-import { SectionHeader, Tile, Post } from '../shared';
+import { SectionHeader, Tile, PostTile } from '../shared';
 import { AppContext } from '../';
 import './post.css';
 
@@ -43,11 +43,11 @@ const Highlights = props => {
                 <GridWrapper>
                     {posts.slice(-11).map(post => (
                         <Tile key={post.id}>
-                            <Post post={post} action="edit" />
+                            <PostTile post={post} action="edit" />
                         </Tile>
                     ))}
                     <Tile className={slide ? 'create-post-slide' : null}>
-                        <Post action="create" />
+                        <PostTile action="create" />
                     </Tile>
                 </GridWrapper>
             </Wrapper>

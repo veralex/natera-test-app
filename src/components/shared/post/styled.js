@@ -14,7 +14,10 @@ export const PostCreate = styled.form`
 `;
 
 export const PostModalFooter = styled.div`
+    position: absolute;
+    bottom: 0px;
     height: 4em;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

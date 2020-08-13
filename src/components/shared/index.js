@@ -2,7 +2,7 @@ import { Tile } from './Tile';
 import { SectionHeader } from './SectionHeader';
 import { Button } from './Button';
 
-export { Post } from './post';
+export * from './post';
 export * from './modal';
 // export * from './inputs/TextInput';
 // export * from './inputs/FileInput';
