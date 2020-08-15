@@ -10,6 +10,9 @@ export const TableRow = styled.tr`
     .date-table-cell {
         text-align: end;
     }
+    .status-bar-cell {
+        width: 12.5em;
+    }
 `;
 
 export const RemoveButtonCell = styled.td`

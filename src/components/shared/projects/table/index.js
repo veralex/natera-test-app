@@ -1,10 +1,11 @@
 import React from 'react';
 import { Row } from './row';
 import { Label } from '../../';
+import { StyledTable } from './styled';
 
 export const Table = ({ projects, edit }) => {
     return (
-        <Table>
+        <StyledTable>
             <thead>
                 <tr>
                     <th>
@@ -29,6 +30,6 @@ export const Table = ({ projects, edit }) => {
                         <Row key={project.id} project={project} edit={edit} />
                     ))}
             </tbody>
-        </Table>
+        </StyledTable>
     );
 };

@@ -22,7 +22,7 @@ export const Row = ({ project, edit = false }) => {
             <td>
                 <span>{project.status}%</span>
             </td>
-            <td>
+            <td className="status-bar-cell">
                 <StatusBar status={project.status} />
             </td>
             <td className="date-table-cell">
