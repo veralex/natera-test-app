@@ -1,4 +1,10 @@
-import Layout from './Layout';
+import React from 'react';
+import { Highlights } from './highlights';
+import { Projects } from '../shared';
 
-export { Highlights } from './Highlights';
-export default Layout;
+export const Edit = () => (
+    <>
+        <Highlights />
+        <Projects edit />
+    </>
+);

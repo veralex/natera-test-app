@@ -1,8 +1,12 @@
-import Layout from './Layout';
-import TopGrid from './TopGrid';
-import Statistics from './Statistics';
-import Employees from './Employees';
-export { Highlights } from './highlights';
+import React from 'react';
+import { TopGrid } from './top-grid';
+import { Highlights } from './highlights';
+import { Projects } from '../shared/projects';
 
-export { TopGrid, Statistics, Employees };
-export default Layout;
+export const Dashboard = () => (
+    <>
+        <TopGrid />
+        <Highlights />
+        <Projects />
+    </>
+);

@@ -8,8 +8,8 @@ import {
     Switch,
 } from 'react-router-dom';
 import RouterCarousel from 'react-router-carousel';
-import Dashboard from './dashboard';
-import Edit from './edit';
+import { Dashboard } from './dashboard';
+import { Edit } from './edit';
 
 const StyledMenu = styled.div`
     display: flex;

@@ -4,7 +4,7 @@
 }
 @keyframes slide {
     from {
-        left: -244px;
+        left: -15.25em;
     }
     to {
         left: 0px;
