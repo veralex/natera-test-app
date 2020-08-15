@@ -1,9 +1,17 @@
-import React, { isValidElement } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { createBrowserHistory } from 'history';
-import { Router, Route, NavLink, Switch } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    Route,
+    NavLink,
+    Switch,
+} from 'react-router-dom';
+import RouterCarousel from 'react-router-carousel';
+import Dashboard from './dashboard';
+import Edit from './edit';
 
-const StyledMenu = styled.ul`
+const StyledMenu = styled.div`
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -25,41 +33,50 @@ const StyledMenu = styled.ul`
     }
 `;
 
-const AppRouter = props => {
-    const { children } = props;
+const Carousel = () => {
+    return (
+        <RouterCarousel
+            swipeLeftClassName={
+                'router-carousel-zone router-carousel-zone--left'
+            }
+            swipeRightClassName={
+                'router-carousel-zone router-carousel-zone--right'
+            }
+            // sliderMode={true}
+            fallbackRoute={<div>No content</div>}
+        >
+            <Route path="/" component={Dashboard} />
+            <Route path="/edit" component={Edit} />
+        </RouterCarousel>
+    );
+};
+
+export const AppRouter = () => {
     const history = createBrowserHistory();
 
     return (
         <Router history={history}>
-            <nav>
-                <StyledMenu >
-                    {React.Children.map(children, child =>
-                        isValidElement(child) ? (
-                            <li key={child.props.resource}>
-                                <NavLink
-                                    to={`/${child.props.resource}`}
-                                    className='nav-link'
-                                    activeClassName='nav-link-active'
-                                    exact
-                                >
-                                    {child.props.label}
-                                </NavLink>
-                            </li>
-                        ) : null
-                    )}
-                </StyledMenu>
-            </nav>
+            <StyledMenu>
+                <NavLink
+                    to="/"
+                    className="nav-link"
+                    activeClassName="nav-link-active"
+                    exact
+                >
+                    Dashboard
+                </NavLink>
+                <NavLink
+                    to="/edit"
+                    className="nav-link"
+                    activeClassName="nav-link-active"
+                    exact
+                >
+                    Edit
+                </NavLink>
+            </StyledMenu>
             <Switch>
-                {React.Children.map(children, child =>
-                    isValidElement(child) ? (
-                        <Route path={`/${child.props.resource}`} exact>
-                            {child}
-                        </Route>
-                    ) : null
-                )}
+                <Route path="*" component={Carousel} />
             </Switch>
         </Router>
     );
 };
-
-export default AppRouter;

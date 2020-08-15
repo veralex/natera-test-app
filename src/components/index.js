@@ -1,4 +1,3 @@
-import Router from './router';
+export { AppRouter as Router } from './router';
 
 export * from './AppContext';
-export { Router };
