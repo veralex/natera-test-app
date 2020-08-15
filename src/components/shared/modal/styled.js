@@ -5,8 +5,9 @@ export const ModalFooterDivider = styled.div`
     width: 100%;
     height: 1px;
     bottom: 4em;
+    padding: 0em 3.5em;
     hr {
-        width: 84%;
+        width: 100%;
         border: 1px solid ${props => props.theme.lightGray};
     }
 `;

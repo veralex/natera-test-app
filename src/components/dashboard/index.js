@@ -2,7 +2,7 @@ import Layout from './Layout';
 import TopGrid from './TopGrid';
 import Statistics from './Statistics';
 import Employees from './Employees';
-import Highlights from './Highlights';
+export { Highlights } from './highlights';
 
-export { TopGrid, Statistics, Employees, Highlights };
+export { TopGrid, Statistics, Employees };
 export default Layout;

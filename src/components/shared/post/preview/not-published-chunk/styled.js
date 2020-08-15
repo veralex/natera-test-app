@@ -1,7 +1,6 @@
-import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
     background: ${props => props.theme.lightRed};
     display: flex;
     flex-direction: row;
@@ -11,12 +10,12 @@ const Wrapper = styled.div`
     width: 100%;
 `;
 
-const Icon = styled.div`
+export const Icon = styled.div`
     color: ${props => props.theme.darkRed};
     font-size: 12px;
 `;
 
-const Label = styled.span`
+export const Label = styled.span`
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
@@ -25,12 +24,3 @@ const Label = styled.span`
     text-transform: uppercase;
     color: ${props => props.theme.darkRed};
 `;
-
-const PostNotPublishedChunk = () => (
-    <Wrapper>
-        <Icon className="material-icons">visibility_off</Icon>
-        <Label>Not published</Label>
-    </Wrapper>
-);
-
-export { PostNotPublishedChunk };

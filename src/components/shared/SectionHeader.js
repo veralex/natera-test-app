@@ -14,10 +14,8 @@ const Text = styled.h1`
     color: ${props => props.theme.sectionLabel};
 `;
 
-const SectionHeader = ({ children, className }) => (
+export const SectionHeader = ({ children, className }) => (
     <Header className={className}>
         <Text>{children}</Text>
     </Header>
 );
-
-export { SectionHeader };

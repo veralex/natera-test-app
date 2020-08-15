@@ -1,6 +1,5 @@
-export { PostFooterContent } from './PostFooterContent';
-export { PostHeaderContent } from './PostHeaderContent';
-export { PostNotPublishedChunk } from './PostNotPublishedChunk';
-export { PostCreateForm } from './PostCreateForm';
-export { PostBodyPreview } from './PostBodyPreview';
-export { PostTile } from './PostTile';
+export * from './author';
+export * from './show';
+export * from './image';
+export * from './create';
+export * from './preview';

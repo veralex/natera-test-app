@@ -23,7 +23,7 @@ body {
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    min-width: 954px;
+    min-width: 60em;
 }
 
 code {
@@ -36,7 +36,8 @@ h2,
 h3,
 h4,
 h5,
-hr {
+hr,
+p {
     margin: 0px;
 }
 
@@ -49,7 +50,8 @@ span {
 
 h3,
 h5,
-td {
+td,
+p {
     font-family: 'Roboto';
 }
 

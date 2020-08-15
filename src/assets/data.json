@@ -1,23 +1,23 @@
 {
     "posts": [
         {
-            "id": 1,
-            "title": "Optio quam dignissimos voluptatibus, magni molestiae suscipit. Animi explicabo exercitationem libero voluptas?",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam vero pariatur delectus, commodi nemo eligendi quos placeat nesciunt in eum tempore ad quo ab? Magni magnam pariatur aut hic quod.\n\nLorem ipsum dolor sit amet consectetur adipisicing elit. Autem corrupti atque eum aperiam. Harum, doloribus inventore! Quos temporibus vel, mollitia optio totam, iste itaque placeat a repellendus possimus similique asperiores!",
+            "id": "100",
+            "title": "Failure is simply the opportunity to begin again, this time more intelligently.",
+            "body": "What if a surgeon or patient could train or prepare for a complex procedure by simulating it first in a 360-degree, 3D simulation? What if a patient could put aside the pamphlets and actually see the impact a diet would have on his or her future appearance? What if impaired mobility patients could experience brain- and coordination-building activities in complete safety? \nImmersive \"digital reality\" tools such as augmented reality (AR) and virtual reality (VR) are making these scenarios increasingly realistic. As with many earlier technology waves, VR and AR got an early boost from frivolous uses and are graduating to more constructive roles. Barriers to technology, cost, and content are beginning to fall, and early adopters are already hard at work.",
             "published": true,
             "author_id": "1488",
             "image": null
         },
         {
-            "id": 2,
-            "title": "Tempore odio",
-            "body": "Atque quisquam reiciendis distinctio nobis at ipsum ullam esse maiores velit impedit labore libero, quaerat dolor reprehenderit? Pariatur, fugit nihil ex numquam, placeat nostrum excepturi et aliquam aut voluptatibus quam expedita! Corporis.\n\nBeatae sapiente tempore, repudiandae eius, enim fuga reprehenderit tempora dignissimos provident molestiae consequatur, suscipit nihil dolorum nemo? Autem eum, illum in vel veniam eligendi blanditiis exercitationem eos quis voluptatum, excepturi minima eius.",
-            "published": false,
+            "id": "101",
+            "title": "We did it!",
+            "body": "Combining technological innovation, entrepreneurship, and rapid growth, the Fast 500 companies—both large and small, public and private—lead and transform the way we do business today.",
+            "published": true,
             "author_id": "1489",
             "image": "Happy-Business-Computer-People-1.png"
         },
         {
-            "id": 3,
+            "id": "102",
             "title": "Mollitia eaque culpa amet perferendis esse nulla facilis nemo, adipisci sit odit",
             "body": "Voluptatum nesciunt suscipit aperiam saepe vitae eius doloremque nemo in! Corrupti tenetur inventore natus dicta voluptates excepturi eligendi",
             "published": true,
@@ -36,7 +36,7 @@
             "id": "1489",
             "name": "Lina Lake",
             "title": "Head of manager dept.",
-            "image": "face00002.png"
+            "image": "face00004.png"
         },
         {
             "id": "1490",
@@ -48,7 +48,7 @@
             "id": "1491",
             "name": "George Fields",
             "title": "Head of QA dept.",
-            "image": "face00004.png"
+            "image": "face00002.png"
         }
     ],
     "projects": [

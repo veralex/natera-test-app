@@ -1,14 +1,9 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { Button } from '..';
-import { AppContext } from '../..';
+import { Wrapper } from './styled';
+import { Button } from '../../..';
+import { AppContext } from '../../../..';
 
-const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-`;
-
-const PostHeaderContent = ({ post }) => {
+export const HeaderContent = ({ post }) => {
     const { publishPost, unpublishPost, removePost } = useContext(AppContext);
     return (
         <Wrapper>
@@ -44,5 +39,3 @@ const PostHeaderContent = ({ post }) => {
         </Wrapper>
     );
 };
-
-export { PostHeaderContent };
