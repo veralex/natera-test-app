@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../..';
+import { AppContext } from '../../../../../';
 
-const RemoveProjectButton = ({ project, onClickHandler }) => {
+export const RemoveButton = ({ project, onClickHandler }) => {
     const { removeProject } = useContext(AppContext);
 
     return (
@@ -16,5 +16,3 @@ const RemoveProjectButton = ({ project, onClickHandler }) => {
         </div>
     );
 };
-
-export { RemoveProjectButton };

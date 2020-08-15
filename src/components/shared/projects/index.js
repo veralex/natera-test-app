@@ -1,5 +1,18 @@
-export { Projects } from './Projects';
-export { ProjectsTable } from './ProjectsTable';
-export { ProjectsTableRow } from './ProjectsTableRow';
-export { ProjectsStatusBar } from './ProjectsStatusBar';
-export { RemoveProjectButton } from './RemoveProjectButton';
+import React, { useContext } from 'react';
+import { SectionHeader } from '..';
+import { Table } from './table';
+import { AppContext } from '../../';
+import { TableTile } from './styled';
+
+export const Projects = ({ edit }) => {
+    const { projects } = useContext(AppContext);
+
+    return (
+        <>
+            <SectionHeader>Projects</SectionHeader>
+            <TableTile>
+                <Table projects={projects} edit={edit} />
+            </TableTile>
+        </>
+    );
+};
