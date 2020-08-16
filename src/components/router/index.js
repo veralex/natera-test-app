@@ -2,13 +2,13 @@ import React from 'react';
 import { createBrowserHistory } from 'history';
 import { Router, Route, NavLink, Switch } from 'react-router-dom';
 import RouterCarousel from 'react-router-carousel';
-import { Dashboard } from 'components/dashboard';
-import { Edit } from 'components/edit';
+import { Dashboard } from 'components/pages/dashboard';
+import { Edit } from 'components/pages/edit';
 import { Menu } from './styled';
 
 const Carousel = () => {
     return (
-        <RouterCarousel fallbackRoute={<div>No content</div>}>
+        <RouterCarousel>
             <Route path="/" component={Dashboard} />
             <Route path="/edit" component={Edit} />
         </RouterCarousel>
