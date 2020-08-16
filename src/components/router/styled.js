@@ -20,4 +20,12 @@ export const Menu = styled.div`
         color: #ffffff;
         border-bottom: 3px solid #ffffff;
     }
+    @media (max-width: 375px) {
+        margin-top: 1em;
+        margin-bottom: 3em;
+        margin-left: 1em;
+        .nav-link-active {
+            border-bottom: none;
+        }
+    }
 `;
