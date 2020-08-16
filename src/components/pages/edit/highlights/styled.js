@@ -10,6 +10,5 @@ export const Wrapper = styled.div`
 
 export const Grid = styled(BaseGrid)`
     grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
     overflow: hidden;
 `;

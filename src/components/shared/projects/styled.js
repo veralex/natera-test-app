@@ -4,7 +4,6 @@ import { BaseGrid } from 'components/shared/layout/styled';
 
 export const Grid = styled(BaseGrid)`
     grid-template-columns: 1fr;
-    grid-auto-rows: auto;
     @media (max-width: 375px) {
         margin: 0 1em 0.5em;
     }
