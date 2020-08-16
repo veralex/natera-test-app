@@ -1,7 +1,8 @@
 import React, { useContext, useEffect } from 'react';
-import { SectionHeader, Tile, PostPreview } from '../../shared';
+import { SectionHeader, Tile } from 'components/shared';
+import { PostPreview } from 'components/shared/post';
 import { Wrapper, GridWrapper } from './styled';
-import { AppContext } from '../../';
+import { AppContext } from 'components/context';
 import './index.css';
 
 export const Highlights = () => {

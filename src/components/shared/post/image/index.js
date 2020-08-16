@@ -6,9 +6,7 @@ export const PostImage = ({ post, showTitle = true }) => {
         post.image?.startsWith('data:image') ? post.image : null
     );
     if (post.image && !img)
-        import(`../../../../assets/${post.image}`).then(res =>
-            setImg(res.default)
-        );
+        import(`assets/${post.image}`).then(res => setImg(res.default));
     return (
         img && (
             <ImageWrapper img={img}>

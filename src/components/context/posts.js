@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
 import reducer from './reducer';
 import { CREATE, UPDATE, DELETE } from './actions';
-import data from '../../assets/data.json';
+import data from 'assets/data.json';
 
 export const Posts = () => {
     // const reducer = (state, action) => {

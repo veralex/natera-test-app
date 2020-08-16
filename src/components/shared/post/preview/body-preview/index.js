@@ -7,9 +7,7 @@ export const BodyPreview = ({ post }) => {
     );
     if (post.image && !img)
         // This is a crutch that loads an image both from local file and uploaded file
-        import(`../../../../../assets/${post.image}`).then(res =>
-            setImg(res.default)
-        );
+        import(`assets/${post.image}`).then(res => setImg(res.default));
     return post.image ? (
         img && (
             <ImageWrapper img={img}>

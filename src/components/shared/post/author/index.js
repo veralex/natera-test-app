@@ -1,5 +1,5 @@
 import React, { useContext, useState, useMemo } from 'react';
-import { AppContext } from '../../../context';
+import { AppContext } from 'components/context';
 import { Wrapper, Avatar, Body } from './styled';
 
 export const Author = ({ post }) => {
@@ -10,7 +10,7 @@ export const Author = ({ post }) => {
     ]);
 
     const [img, setImg] = useState(null);
-    import(`../../../../assets/${user.image}`).then(res => setImg(res.default));
+    import(`assets/${user.image}`).then(res => setImg(res.default));
 
     return (
         <Wrapper>

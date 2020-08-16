@@ -2,16 +2,16 @@ import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { Button } from '../../button';
-import { Author, PostCreateForm } from '../';
+import { Button } from 'components/shared';
+import { Author, PostCreateForm } from 'components/shared/post';
 import { HeaderContent } from './header-content';
 import { NotPublishedChunk } from './not-published-chunk';
 import { BodyPreview } from './body-preview';
-import { AppContext } from '../../..';
+import { AppContext } from 'components/context';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper, Icon, Label } from './styled';
 
-import theme from '../../../../theme';
+import theme from 'components/../theme';
 
 const PostComponent = ({ action, post, onClick }) => {
     const { createPost, setModalOpen, modalOpen } = useContext(AppContext);

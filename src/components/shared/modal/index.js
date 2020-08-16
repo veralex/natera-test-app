@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom';
 import Rodal from 'rodal';
-import { AppContext } from '../..';
+import { AppContext } from 'components/context';
 import { ModalFooterDivider, ModalContent } from './styled';
 import './modal.css';
 

@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-    /* position: absolute; */
+    /* position: absolute;
+    top: 15em; */
     width: 100%;
-    top: 15em;
+    margin-top: 8em;
 `;
 
 export const GridWrapper = styled.div`

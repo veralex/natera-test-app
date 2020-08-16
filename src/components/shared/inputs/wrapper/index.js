@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Label } from '../../labels';
+import { Label } from 'components/shared';
 import { Wrapper } from './styled';
 
 const InputWrapper = ({ label, className, children }) => {

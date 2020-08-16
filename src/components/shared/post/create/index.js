@@ -5,7 +5,7 @@ import {
     Button,
     AutocompleteInput,
     Switch,
-} from '../../';
+} from 'components/shared';
 import { ModalFooter, ModalContentWrapper } from '../styled';
 import { CreateForm, Title, CreateControl } from './styled';
 

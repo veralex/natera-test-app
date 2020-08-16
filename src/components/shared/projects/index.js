@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { SectionHeader } from '..';
 import { Table } from './table';
-import { AppContext } from '../../';
+import { AppContext } from 'components/context';
 import { TableTile } from './styled';
 
 export const Projects = ({ edit }) => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Row } from './row';
-import { Label } from '../../';
+import { Label } from 'components/shared';
 import { StyledTable } from './styled';
 
 export const Table = ({ projects, edit }) => {

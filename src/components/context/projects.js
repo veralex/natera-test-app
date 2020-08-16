@@ -1,7 +1,7 @@
 import { useReducer } from 'react';
 import reducer from './reducer';
 import { CREATE, DELETE } from './actions';
-import data from '../../assets/data.json';
+import data from 'assets/data.json';
 
 export const Projects = () => {
     const [state, dispatch] = useReducer(reducer, data.projects);

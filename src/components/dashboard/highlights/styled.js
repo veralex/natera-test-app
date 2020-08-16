@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Tile } from '../../shared';
+import { Tile } from 'components/shared';
 
 export const GridWrapper = styled.div`
     display: grid;

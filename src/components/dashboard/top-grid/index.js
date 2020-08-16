@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tile } from '../../shared';
+import { Tile } from 'components/shared';
 import { Statistics } from './statistics';
 import { Employees } from './employees';
 import { Grid, GridItem } from './styled';

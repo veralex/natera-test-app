@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { Label } from '../../../shared';
-import graph from '../../../../assets/deals_graphic.png';
+import { Label } from 'components/shared';
+import graph from 'assets/deals_graphic.png';
 import { Wrapper, Column, Link, LinkRow } from './styled';
 import { ColoredText, Row, BigText, Icon } from '../shared/styled';
-import { AppContext } from '../../../context';
+import { AppContext } from 'components/context';
 
 export const Statistics = () => {
     const { statistics } = useContext(AppContext);

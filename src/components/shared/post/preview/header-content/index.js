@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Wrapper } from './styled';
-import { Button } from '../../..';
-import { AppContext } from '../../../..';
+import { Button } from 'components/shared';
+import { AppContext } from 'components/context';
 
 export const HeaderContent = ({ post }) => {
     const { publishPost, unpublishPost, removePost } = useContext(AppContext);

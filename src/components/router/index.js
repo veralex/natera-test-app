@@ -2,21 +2,13 @@ import React from 'react';
 import { createBrowserHistory } from 'history';
 import { Router, Route, NavLink, Switch } from 'react-router-dom';
 import RouterCarousel from 'react-router-carousel';
-import { Dashboard } from '../dashboard';
-import { Edit } from '../edit';
+import { Dashboard } from 'components/dashboard';
+import { Edit } from 'components/edit';
 import { Menu } from './styled';
 
 const Carousel = () => {
     return (
-        <RouterCarousel
-            swipeLeftClassName={
-                'router-carousel-zone router-carousel-zone--left'
-            }
-            swipeRightClassName={
-                'router-carousel-zone router-carousel-zone--right'
-            }
-            fallbackRoute={<div>No content</div>}
-        >
+        <RouterCarousel fallbackRoute={<div>No content</div>}>
             <Route path="/" component={Dashboard} />
             <Route path="/edit" component={Edit} />
         </RouterCarousel>

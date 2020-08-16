@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../../../context';
+import { AppContext } from 'components/context';
 import { Wrapper, TopGrid, Icon } from './styled';
 import { Row, BigText, ColoredText } from '../shared/styled';
-import { Label } from '../../../shared';
+import { Label } from 'components/shared';
 import { Chip } from './chip';
 
 export const Employees = () => {

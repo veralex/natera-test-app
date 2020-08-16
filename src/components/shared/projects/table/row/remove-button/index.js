@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../../../../../';
+import { AppContext } from 'components/context';
 
 export const RemoveButton = ({ project, onClickHandler }) => {
     const { removeProject } = useContext(AppContext);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Highlights } from './highlights';
-import { Projects } from '../shared';
+import { Projects } from '../shared/projects';
 
 export const Edit = () => (
     <>

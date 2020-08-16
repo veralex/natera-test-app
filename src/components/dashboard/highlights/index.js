@@ -1,10 +1,7 @@
 import React, { useContext } from 'react';
-import { AppContext } from '../..';
-import {
-    SectionHeader,
-    PostPreview,
-    GeneratePostShowComponent,
-} from '../../shared';
+import { AppContext } from 'components/context';
+import { SectionHeader } from 'components/shared';
+import { PostPreview, GeneratePostShowComponent } from 'components/shared/post';
 import { GridWrapper, AnimatedTile } from './styled';
 
 export const Highlights = React.memo(() => {

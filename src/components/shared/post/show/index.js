@@ -1,10 +1,10 @@
 import React, { useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from 'styled-components';
-import { Button } from '../../';
-import { Author as PostAuthor, PostImage } from '../';
+import { Button } from 'components/shared';
+import { Author as PostAuthor, PostImage } from 'components/shared/post';
 import { Title, Author, Text, Footer, BodyWrapper } from './styled';
-import theme from '../../../../theme';
+import theme from 'components/../theme';
 
 export const PostShow = ({ post, close }) => {
     const paragraphs = useMemo(() => post.body.split('\n'), [post]);
