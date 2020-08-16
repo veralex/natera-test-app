@@ -8,9 +8,9 @@ export const CreateForm = styled.form`
     height: 100%;
     position: relative;
     width: 100%;
-    ${SectionHeader} {
+    /* ${SectionHeader} {
         padding-left: 0px;
-    }
+    } */
 `;
 
 export const Title = styled.h1`

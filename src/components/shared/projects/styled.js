@@ -1,13 +1,11 @@
 import styled from 'styled-components';
-import { Tile } from '../tile';
+import { Tile } from '../layout';
+import { BaseGrid } from 'components/shared/layout/styled';
 
-export const GridWrapper = styled.div`
-    display: grid;
+export const Grid = styled(BaseGrid)`
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
-    grid-gap: 1.25em;
     @media (max-width: 375px) {
-        grid-template-columns: 1fr;
         margin: 0 1em 0.5em;
     }
 `;

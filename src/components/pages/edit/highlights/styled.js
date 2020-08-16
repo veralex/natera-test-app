@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { BaseGrid } from 'components/shared/layout/styled';
 
 export const Wrapper = styled.div`
     /* position: absolute;
@@ -7,10 +8,8 @@ export const Wrapper = styled.div`
     margin-top: 8em;
 `;
 
-export const GridWrapper = styled.div`
-    display: grid;
+export const Grid = styled(BaseGrid)`
     grid-template-columns: repeat(4, 1fr);
-    gap: 1.25em;
     grid-auto-rows: auto;
     overflow: hidden;
 `;

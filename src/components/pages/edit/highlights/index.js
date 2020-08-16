@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { SectionHeader, Tile } from 'components/shared';
 import { PostPreview } from 'components/shared/post';
-import { Wrapper, GridWrapper } from './styled';
+import { Wrapper, Grid } from './styled';
 import { AppContext } from 'components/context';
 import './index.css';
 
@@ -26,7 +26,7 @@ export const Highlights = () => {
     return (
         <Wrapper>
             <SectionHeader>Highlights</SectionHeader>
-            <GridWrapper>
+            <Grid>
                 {posts.slice(-11).map(post => (
                     <Tile key={post.id}>
                         <PostPreview post={post} action="edit" />
@@ -35,7 +35,7 @@ export const Highlights = () => {
                 <Tile className={slide ? 'create-post-slide' : null}>
                     <PostPreview action="create" />
                 </Tile>
-            </GridWrapper>
+            </Grid>
         </Wrapper>
     );
 };

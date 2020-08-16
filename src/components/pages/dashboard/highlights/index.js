@@ -2,14 +2,14 @@ import React, { useContext } from 'react';
 import { AppContext } from 'components/context';
 import { SectionHeader } from 'components/shared';
 import { PostPreview, GeneratePostShowComponent } from 'components/shared/post';
-import { GridWrapper, AnimatedTile } from './styled';
+import { Grid, AnimatedTile } from './styled';
 
 export const Highlights = React.memo(() => {
     const { posts, setModalOpen } = useContext(AppContext);
     return (
         <div>
             <SectionHeader>Highlights</SectionHeader>
-            <GridWrapper>
+            <Grid>
                 {posts
                     .filter(post => post.published)
                     .slice(-8)
@@ -28,7 +28,7 @@ export const Highlights = React.memo(() => {
                             />
                         </AnimatedTile>
                     ))}
-            </GridWrapper>
+            </Grid>
         </div>
     );
 });

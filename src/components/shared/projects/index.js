@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { SectionHeader } from '..';
 import { Table } from './table';
 import { AppContext } from 'components/context';
-import { TableTile, GridWrapper } from './styled';
+import { TableTile, Grid } from './styled';
 
 export const Projects = ({ edit }) => {
     const { projects } = useContext(AppContext);
@@ -10,11 +10,11 @@ export const Projects = ({ edit }) => {
     return (
         <>
             <SectionHeader>Projects</SectionHeader>
-            <GridWrapper>
+            <Grid>
                 <TableTile>
                     <Table projects={projects} edit={edit} />
                 </TableTile>
-            </GridWrapper>
+            </Grid>
         </>
     );
 };

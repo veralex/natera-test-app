@@ -1,13 +1,11 @@
 import styled from 'styled-components';
+import { BaseGrid } from 'components/shared/layout/styled';
 
-export const Grid = styled.div`
-    display: grid;
+export const Grid = styled(BaseGrid)`
     grid-template-columns: 5fr 3fr;
     height: 15em;
-    grid-gap: 1.25em;
     margin-top: 4em;
     @media (max-width: 375px) {
-        grid-template-columns: 1fr;
         margin: 1em 1em 0;
         height: auto;
     }
