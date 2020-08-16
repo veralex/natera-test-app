@@ -4,3 +4,4 @@ export * from './labels';
 export * from './layout';
 export * from './button';
 export * from './footer';
+export * from './notifications';
