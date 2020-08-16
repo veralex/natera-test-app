@@ -1,21 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
+import PropTypes from 'prop-types';
 import ReactSwitch from 'react-switch';
+import { Wrapper, Label } from './styled';
 
-const Wrapper = styled.div`
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-`;
-
-const Label = styled.h4`
-    font-size: 14px;
-    font-weight: 400;
-    margin-left: 20px;
-    color: ${props => props.theme.inputText};
-`;
-
-const Switch = ({ name, label, value, onChange = e => {} }) => {
+const Switch = ({ label, value, onChange = e => {} }) => {
     return (
         <Wrapper>
             <ReactSwitch
@@ -31,6 +19,12 @@ const Switch = ({ name, label, value, onChange = e => {} }) => {
             {label && <Label>{label}</Label>}
         </Wrapper>
     );
+};
+
+Switch.propTypes = {
+    label: PropTypes.string,
+    value: PropTypes.bool.isRequired,
+    onChange: PropTypes.func,
 };
 
 export { Switch };

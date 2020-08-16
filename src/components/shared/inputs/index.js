@@ -1,4 +1,4 @@
-export { AutocompleteInput } from './AutocompleteInput';
-export { TextInput } from './TextInput';
-export { FileInput } from './FileInput';
-export { Switch } from './Switch';
+export { AutocompleteInput } from './autocomplete-input';
+export { TextInput } from './text-input';
+export { FileInput } from './file-input';
+export { Switch } from './switch';

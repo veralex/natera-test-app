@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import { Button } from '../..';
+import { Button } from '../../button';
 import { Author, PostCreateForm } from '../';
 import { HeaderContent } from './header-content';
 import { NotPublishedChunk } from './not-published-chunk';

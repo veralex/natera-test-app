@@ -1,5 +1,5 @@
 import React from 'react';
-import { InputWrapper } from '..';
+import { Wrapper } from '../wrapper';
 
 const TextInput = ({ name, label, value, onChange = e => {}, children }) => {
     const inputProps = {
@@ -8,7 +8,7 @@ const TextInput = ({ name, label, value, onChange = e => {}, children }) => {
         onChange,
     };
     return (
-        <InputWrapper label={label}>
+        <Wrapper label={label}>
             {children ? (
                 React.cloneElement(children, {
                     ...children.props,
@@ -17,7 +17,7 @@ const TextInput = ({ name, label, value, onChange = e => {}, children }) => {
             ) : (
                 <input type="text" {...inputProps} />
             )}
-        </InputWrapper>
+        </Wrapper>
     );
 };
 

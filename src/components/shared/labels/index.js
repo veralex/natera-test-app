@@ -1,2 +1,2 @@
-export { Label } from './Label';
-export { InputWrapper } from './InputWrapper';
+export * from './label';
+export * from './section-header';

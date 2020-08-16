@@ -1,7 +1,8 @@
 import React, { useContext, useMemo } from 'react';
+import PropTypes from 'prop-types';
 import Input from 'react-autocomplete';
-import { AppContext } from '../../AppContext';
-import { InputWrapper } from '..';
+import { AppContext } from '../../../AppContext';
+import { Wrapper } from '../wrapper';
 
 const AutocompleteInput = ({
     name,
@@ -21,7 +22,7 @@ const AutocompleteInput = ({
     }, [itemsSource, value]);
 
     return (
-        <InputWrapper label={label}>
+        <Wrapper label={label}>
             <Input
                 inputProps={{
                     name,
@@ -45,8 +46,17 @@ const AutocompleteInput = ({
                 onChange={(e, value) => onChange({ target: { value, name } })}
                 onSelect={(value, item) => onSelect(item)}
             />
-        </InputWrapper>
+        </Wrapper>
     );
+};
+
+AutocompleteInput.propTypes = {
+    name: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func,
+    onSelect: PropTypes.func,
+    source: PropTypes.string.isRequired,
 };
 
 export { AutocompleteInput };

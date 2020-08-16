@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Tile } from '../';
+import { Tile } from '../tile';
 
 export const TableTile = styled(Tile)`
     height: fit-content;
