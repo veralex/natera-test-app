@@ -115,5 +115,11 @@
             "company": "Trast National",
             "release_date": "Nov 1, 2019"
         }
-    ]
+    ],
+    "statistics": {
+        "earnings": { "revenue": 2289.32, "growth": 12 },
+        "employees": { "number": 62, "selection": 12 },
+        "projects": { "number": 23, "this_month": 3 },
+        "specialization": ["java", "ruby", "scala", "js"]
+    }
 }

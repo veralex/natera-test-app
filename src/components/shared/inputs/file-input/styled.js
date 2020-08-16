@@ -11,8 +11,8 @@ export const Wrapper = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        right: 0px;
-        bottom: 0px;
+        right: 0;
+        bottom: 0;
         height: 2.05em;
         width: 7em;
         background: ${props => props.theme.lightGray};

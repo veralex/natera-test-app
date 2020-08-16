@@ -1,3 +1,2 @@
-export { AppRouter as Router } from './router';
-
-export * from './AppContext';
+export { AppContext, AppProvider } from './context';
+export * from './router';

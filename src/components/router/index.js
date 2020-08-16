@@ -1,37 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
 import { createBrowserHistory } from 'history';
-import {
-    BrowserRouter as Router,
-    Route,
-    NavLink,
-    Switch,
-} from 'react-router-dom';
+import { Router, Route, NavLink, Switch } from 'react-router-dom';
 import RouterCarousel from 'react-router-carousel';
-import { Dashboard } from './dashboard';
-import { Edit } from './edit';
-
-const StyledMenu = styled.div`
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    margin-top: 48px;
-    .nav-link {
-        font-size: 20px;
-        font-weight: bold;
-        font-style: normal;
-        line-height: 24px;
-        padding-bottom: 6p;
-        color: rgba(255, 255, 255, 0.5);
-        border-bottom: none;
-        text-decoration: none;
-    }
-    .nav-link-active {
-        color: #ffffff;
-        border-bottom: 3px solid #ffffff;
-    }
-`;
+import { Dashboard } from '../dashboard';
+import { Edit } from '../edit';
+import { Menu } from './styled';
 
 const Carousel = () => {
     return (
@@ -42,7 +15,6 @@ const Carousel = () => {
             swipeRightClassName={
                 'router-carousel-zone router-carousel-zone--right'
             }
-            // sliderMode={true}
             fallbackRoute={<div>No content</div>}
         >
             <Route path="/" component={Dashboard} />
@@ -51,12 +23,12 @@ const Carousel = () => {
     );
 };
 
-export const AppRouter = () => {
+const AppRouter = () => {
     const history = createBrowserHistory();
 
     return (
         <Router history={history}>
-            <StyledMenu>
+            <Menu>
                 <NavLink
                     to="/"
                     className="nav-link"
@@ -73,10 +45,12 @@ export const AppRouter = () => {
                 >
                     Edit
                 </NavLink>
-            </StyledMenu>
+            </Menu>
             <Switch>
                 <Route path="*" component={Carousel} />
             </Switch>
         </Router>
     );
 };
+
+export { AppRouter as Router };

@@ -3,7 +3,7 @@ import reducer from './reducer';
 import { CREATE, UPDATE, DELETE } from './actions';
 import data from '../../assets/data.json';
 
-export default () => {
+export const Posts = () => {
     // const reducer = (state, action) => {
     //     switch (action.type) {
     //         case CREATE:

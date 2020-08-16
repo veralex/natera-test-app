@@ -3,7 +3,7 @@ import reducer from './reducer';
 import { CREATE, DELETE } from './actions';
 import data from '../../assets/data.json';
 
-export default () => {
+export const Projects = () => {
     const [state, dispatch] = useReducer(reducer, data.projects);
 
     const dispatcher = {

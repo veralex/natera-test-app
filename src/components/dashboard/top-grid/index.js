@@ -7,12 +7,12 @@ import { GridWrapper, ItemWrapper } from './styled';
 export const TopGrid = props => {
     return (
         <GridWrapper>
-            <Tile className="statistics">
+            <Tile className="statistics" height="15em">
                 <ItemWrapper>
                     <Statistics />
                 </ItemWrapper>
             </Tile>
-            <Tile className="specialization">
+            <Tile className="specialization" height="15em">
                 <ItemWrapper>
                     <Employees />
                 </ItemWrapper>

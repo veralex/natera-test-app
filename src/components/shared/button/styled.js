@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 
 export const DefaultButton = styled.button`
-    width: ${props => (props.size === 'small' ? '100%' : '148px')};
+    width: ${props => (props.size === 'small' ? '100%' : '11em')};
     background: ${props => props.theme[props.color]};
     border: ${props => `1px solid ${props.theme[props.color]}`};
     border-radius: ${props => (props.size === 'small' ? '3px' : '5px')};
     height: ${props => {
         switch (props.size) {
             case 'small':
-                return '20px';
+                return '1.5em';
             case 'large':
-                return '32px';
+                return '2.4em';
             default:
-                return '24px';
+                return '1.8em';
         }
     }};
     &:hover {
@@ -25,8 +25,7 @@ export const DefaultButton = styled.button`
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 12px;
-        line-height: 15px;
+        font-size: 0.875em;
         text-align: center;
         letter-spacing: 0.1em;
         text-transform: uppercase;

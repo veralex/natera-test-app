@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
 
 export const Avatar = styled.img`
     border-radius: 50%;
-    height: 36px;
-    width: 36px;
+    height: 2.25em;
+    width: 2.25empx;
 `;
 
 export const Body = styled.div`
@@ -18,7 +18,7 @@ export const Body = styled.div`
     justify-content: space-between;
     h4,
     span {
-        margin: 0px 0px 0px 12px;
+        margin: 0 0 0 12px;
         font-style: normal;
         font-weight: 500;
     }

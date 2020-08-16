@@ -16,8 +16,8 @@ export const Wrapper = styled.div`
         justify-content: center;
     }
     .post-header {
-        flex: 0 0 36px;
-        padding: 0px 12px;
+        flex: 0 0 2.25em;
+        padding: 0 0.75em;
     }
     .post-divider {
         position: absolute;
@@ -25,11 +25,11 @@ export const Wrapper = styled.div`
         height: 1px;
     }
     .header-divider {
-        top: 36px;
+        top: 2.25em;
     }
     .footer-divider {
-        bottom: 56px;
-        padding: 0px 24px;
+        bottom: 3.5em;
+        padding: 0 2em;
     }
 
     .post-body {
@@ -38,11 +38,11 @@ export const Wrapper = styled.div`
         flex-direction: column;
     }
     .post-footer {
-        flex: 0 0 56px;
-        padding: 0px 20px;
+        flex: 0 0 3.5em;
+        padding: 0 1.25em;
     }
     .create-post-button {
-        margin: 0px 16px;
+        margin: 0 1.25em;
     }
 `;
 

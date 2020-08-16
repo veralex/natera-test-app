@@ -1,5 +1,5 @@
 import React, { useContext, useState, useMemo } from 'react';
-import { AppContext } from '../../../AppContext';
+import { AppContext } from '../../../context';
 import { Wrapper, Avatar, Body } from './styled';
 
 export const Author = ({ post }) => {

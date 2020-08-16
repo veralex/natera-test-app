@@ -1,7 +1,7 @@
 import React, { useContext, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import Input from 'react-autocomplete';
-import { AppContext } from '../../../AppContext';
+import { AppContext } from '../../../context';
 import { Wrapper } from '../wrapper';
 
 const AutocompleteInput = ({
