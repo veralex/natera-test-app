@@ -26,11 +26,6 @@ body {
     min-width: 60em;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
 h1,
 h2,
 h3,
@@ -51,7 +46,8 @@ span {
 h3,
 h5,
 td,
-p {
+p,
+code {
     font-family: 'Roboto';
 }
 

@@ -2,21 +2,21 @@ import React from 'react';
 import { Tile } from '../../shared';
 import { Statistics } from './statistics';
 import { Employees } from './employees';
-import { GridWrapper, ItemWrapper } from './styled';
+import { Grid, GridItem } from './styled';
 
 export const TopGrid = props => {
     return (
-        <GridWrapper>
+        <Grid>
             <Tile className="statistics" height="15em">
-                <ItemWrapper>
+                <GridItem>
                     <Statistics />
-                </ItemWrapper>
+                </GridItem>
             </Tile>
             <Tile className="specialization" height="15em">
-                <ItemWrapper>
+                <GridItem>
                     <Employees />
-                </ItemWrapper>
+                </GridItem>
             </Tile>
-        </GridWrapper>
+        </Grid>
     );
 };

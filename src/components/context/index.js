@@ -5,6 +5,7 @@ import json from '../../assets/data.json';
 
 const defaultContext = {
     users: json.users,
+    statistics: json.statistics,
     // projects: json.projects,
 };
 
