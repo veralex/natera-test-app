@@ -1,16 +1,8 @@
 import React, { useContext } from 'react';
 import { Label } from '../../../shared';
 import graph from '../../../../assets/deals_graphic.png';
-import {
-    Wrapper,
-    Column,
-    Row,
-    UsdIcon,
-    Billions,
-    Growth,
-    Link,
-    LinkRow,
-} from './styled';
+import { Wrapper, Column, Link, LinkRow } from './styled';
+import { ColoredText, Row, BigText, Icon } from '../shared/styled';
 import { AppContext } from '../../../context';
 
 export const Statistics = () => {
@@ -20,14 +12,14 @@ export const Statistics = () => {
             <Column>
                 <Label>Earnings</Label>
                 <Row>
-                    <UsdIcon className="material-icons">attach_money</UsdIcon>
-                    <Billions>{statistics.earnings.revenue}</Billions>
+                    <Icon className="material-icons">attach_money</Icon>
+                    <BigText>{statistics.earnings.revenue}</BigText>
                 </Row>
                 <Row>
-                    <Growth>
+                    <ColoredText>
                         <code>+{statistics.earnings.growth}%</code>
                         <span> since last year</span>
-                    </Growth>
+                    </ColoredText>
                 </Row>
                 <LinkRow>
                     <Link>All statistics </Link>
