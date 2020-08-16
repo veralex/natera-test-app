@@ -1,10 +1,13 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import { RemoveButton } from './remove-button';
 import { StatusBar } from './status-bar';
 import { TableRow, RemoveButtonCell } from './styled';
 import './index.css';
 
 export const Row = ({ project, edit = false }) => {
+    const isLarge = !useMediaQuery({ maxWidth: '375px' });
+
     const onProjectDelete = (e, callback) => {
         const tr = e.currentTarget.closest('tr');
         tr.classList.add('table-row-fading');
@@ -16,15 +19,19 @@ export const Row = ({ project, edit = false }) => {
             <td>
                 <span>{project.name}</span>
             </td>
-            <td>
-                <span>{project.company}</span>
-            </td>
+            {isLarge && (
+                <td>
+                    <span>{project.company}</span>
+                </td>
+            )}
             <td>
                 <span>{project.status}%</span>
             </td>
-            <td className="status-bar-cell">
-                <StatusBar status={project.status} />
-            </td>
+            {isLarge && (
+                <td className="status-bar-cell">
+                    <StatusBar status={project.status} />
+                </td>
+            )}
             <td className="date-table-cell">
                 <span>{project.release_date}</span>
             </td>

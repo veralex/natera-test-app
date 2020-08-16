@@ -2,28 +2,38 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
+`;
+
+export const ColumnWrapper = styled.div`
+    display: flex;
     height: 100%;
+    @media (max-width: 375px) {
+        flex-direction: column;
+    }
 `;
 
 export const Column = styled.div`
     width: 100%;
-    position: relative;
+    /* position: relative; */
 `;
 
 export const LinkRow = styled.div`
     display: flex;
     align-items: center;
-    position: absolute;
-    bottom: 0;
     i {
         color: ${props => props.theme.default};
         font-size: 1.5em;
-    }
-    a,
-    i {
         :hover {
             cursor: pointer;
         }
+    }
+`;
+
+export const Chart = styled.img`
+    @media (max-width: 375px) {
+        width: 100%;
+        margin: 1em 0;
     }
 `;
 
@@ -35,4 +45,7 @@ export const Link = styled.a`
     letter-spacing: 0.1em;
     text-decoration: none;
     text-transform: uppercase;
+    :hover {
+        cursor: pointer;
+    }
 `;

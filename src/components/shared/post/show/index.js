@@ -13,12 +13,12 @@ export const PostShow = ({ post, close }) => {
             {post.image && <PostImage post={post} showTitle={false} />}
             <BodyWrapper>
                 <Title>{post.title}</Title>
-                <Text>
+                <Text maxHeight={post.image ? '5em' : '15em'}>
                     {paragraphs.map((p, i) => (
-                        <p key={i}>
-                            {p}
+                        <div key={i}>
+                            <p>{p}</p>
                             <br />
-                        </p>
+                        </div>
                     ))}
                 </Text>
                 <Author>

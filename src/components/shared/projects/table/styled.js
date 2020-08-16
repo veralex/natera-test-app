@@ -14,15 +14,17 @@ export const StyledTable = styled.table`
         height: 2em;
         opacity: 1;
     }
-    td:first-child,
-    th:first-child {
-        padding: 0 0 0 1em;
-    }
-    td:last-child,
-    th:last-child {
-        padding: 0 1em 0 0;
-    }
     .date-label {
         text-align: right;
+    }
+    @media (min-width: 376px) {
+        td:first-child,
+        th:first-child {
+            padding: 0 0 0 1em;
+        }
+        td:last-child,
+        th:last-child {
+            padding: 0 1em 0 0;
+        }
     }
 `;

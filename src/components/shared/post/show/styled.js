@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { ModalContentWrapper, ModalFooter } from '../styled';
 
 export const Text = styled.div`
+    overflow: auto;
+    max-height: ${props => props.maxHeight};
     margin: 1.5em 0em;
     p {
         font-size: 14px;

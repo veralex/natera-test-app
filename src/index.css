@@ -90,11 +90,14 @@ header {
     z-index: 9999;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 375px) {
+    body {
+        min-width: 375px;
+    }
     header {
         height: 75px;
     }
-    .root {
-        width: 100%;
+    #app-container {
+        min-width: 375px;
     }
 }
