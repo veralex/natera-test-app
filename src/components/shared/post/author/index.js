@@ -10,7 +10,10 @@ export const Author = ({ post }) => {
     ]);
 
     let img;
-    if (post.image) img = require(`assets/${user.image}`);
+    if (user.image)
+        img = user.image.startsWith('data:image')
+            ? user.image
+            : require(`assets/${user.image}`);
 
     return (
         <Wrapper>

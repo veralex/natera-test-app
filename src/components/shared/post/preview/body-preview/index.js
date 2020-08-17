@@ -3,7 +3,10 @@ import { TextWrapper, ImageWrapper } from './styled';
 
 export const BodyPreview = ({ post }) => {
     let img;
-    if (post.image) img = require(`assets/${post.image}`);
+    if (post.image)
+        img = post.image.startsWith('data:image')
+            ? post.image
+            : require(`assets/${post.image}`);
 
     return post.image ? (
         img && (

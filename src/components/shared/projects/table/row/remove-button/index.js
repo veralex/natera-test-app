@@ -7,10 +7,7 @@ export const RemoveButton = ({ project, onClickHandler }) => {
     return (
         <div
             className="material-icons"
-            onClick={e => {
-                console.log(e);
-                onClickHandler(e, () => removeProject(project.id));
-            }}
+            onClick={e => onClickHandler(e, () => removeProject(project.id))}
         >
             close
         </div>

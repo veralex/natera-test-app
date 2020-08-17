@@ -9,10 +9,11 @@ const Button = ({
     size = 'standard',
     variant = 'filled',
     color = 'default',
+    disabled = false,
 }) =>
     React.cloneElement(
         variant === 'filled' ? <DefaultButton /> : <OutlinedButton />,
-        { onClick, size, color, className },
+        { onClick, size, color, disabled, className },
         <span className="btn-label">{children}</span>
     );
 
@@ -23,11 +24,7 @@ Button.propTypes = {
     variant: PropTypes.oneOf(['filled', 'outlined']),
     color: PropTypes.oneOf(['default', 'red']),
     className: PropTypes.string,
+    disabled: PropTypes.bool,
 };
-
-// Button.defaultProps = {
-//     variant: 'filled',
-//     color: 'default',
-// };
 
 export { Button };

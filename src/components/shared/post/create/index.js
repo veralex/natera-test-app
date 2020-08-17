@@ -35,11 +35,6 @@ export const PostCreateForm = ({ createPost, cancel }) => {
         setPost({ ...post, author_id: value.name, author: value });
     };
 
-    const handleCancel = () => {
-        cancel();
-        setPost(initialState);
-    };
-
     const hadleInstantPublish = published => setPost({ ...post, published });
 
     return (
@@ -49,15 +44,17 @@ export const PostCreateForm = ({ createPost, cancel }) => {
                 method="POST"
                 onSubmit={e => {
                     e.preventDefault();
-                    const { title, body, published, image } = post;
-                    createPost({
-                        title,
-                        body,
-                        published,
-                        image,
-                        author_id: post.author.id,
-                    });
-                    handleCancel();
+                    if (post.author) {
+                        const { title, body, published, image } = post;
+                        createPost({
+                            title,
+                            body,
+                            published,
+                            image,
+                            author_id: post.author.id,
+                        });
+                        cancel();
+                    }
                 }}
             >
                 <div>
@@ -102,14 +99,13 @@ export const PostCreateForm = ({ createPost, cancel }) => {
                         />
                     </div>
                     <CreateControl>
-                        <span
-                            className="cancel-post-create"
-                            onClick={handleCancel}
-                        >
+                        <span className="cancel-post-create" onClick={cancel}>
                             Cancel
                         </span>
                         <span>or</span>
-                        <Button size="large">Publish</Button>
+                        <Button size="large" disabled={!post.author}>
+                            Publish
+                        </Button>
                     </CreateControl>
                 </ModalFooter>
             </CreateForm>

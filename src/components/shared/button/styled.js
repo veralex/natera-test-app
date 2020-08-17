@@ -2,8 +2,12 @@ import styled from 'styled-components';
 
 export const DefaultButton = styled.button`
     width: ${props => (props.size === 'small' ? '100%' : '11em')};
-    background: ${props => props.theme[props.color]};
-    border: ${props => `1px solid ${props.theme[props.color]}`};
+    background: ${props =>
+        props.disabled ? props.theme.sectionLabel : props.theme[props.color]};
+    border: ${props =>
+        `1px solid ${
+            props.disabled ? props.theme.sectionLabel : props.theme[props.color]
+        }`};
     border-radius: ${props => (props.size === 'small' ? '3px' : '5px')};
     height: ${props => {
         switch (props.size) {
@@ -16,7 +20,7 @@ export const DefaultButton = styled.button`
         }
     }};
     &:hover {
-        cursor: pointer;
+        cursor: ${props => (props.disabled ? 'default' : 'pointer')};
     }
     &:focus {
         outline: none;
@@ -35,7 +39,10 @@ export const DefaultButton = styled.button`
 
 export const OutlinedButton = styled(DefaultButton)`
     background: ${props => props.theme.text};
-    border: ${props => `1px solid ${props.theme[props.color]}`};
+    border: ${props =>
+        `1px solid ${
+            props.disabled ? props.theme.sectionLabel : props.theme[props.color]
+        }`};
     transition: background 0.2s;
     &:hover {
         background: ${props => props.theme[props.color]};
@@ -44,7 +51,10 @@ export const OutlinedButton = styled(DefaultButton)`
         }
     }
     .btn-label {
-        color: ${props => props.theme[props.color]};
+        color: ${props =>
+            props.disabled
+                ? props.theme.sectionLabel
+                : props.theme[props.color]};
         transition: color 0.2s;
     }
 `;
