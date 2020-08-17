@@ -17,7 +17,6 @@ export const AppProvider = props => {
     const { children } = props;
 
     const [modalOpen, setModalOpen] = useState(false);
-    const [showNotification, setShowNotification] = useState(true);
 
     const [posts, dispatchPosts] = useReducer(reducer, json.posts);
     const [projects, dispatchProjects] = useReducer(reducer, json.projects);
@@ -37,8 +36,6 @@ export const AppProvider = props => {
         ...notificationActions(dispatchNotifications),
         modalOpen,
         setModalOpen,
-        showNotification,
-        setShowNotification,
     };
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

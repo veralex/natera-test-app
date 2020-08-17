@@ -1,4 +1,4 @@
-import { CREATE, UPDATE, DELETE } from './actions';
+import { CREATE, UPDATE, UPDATE_ALL, DELETE } from './actions';
 import ObjectID from 'bson-objectid';
 
 export const reducer = (state, action) => {
@@ -22,6 +22,8 @@ export const reducer = (state, action) => {
                     ? { ...item, ...action.payload.values }
                     : item
             );
+        case UPDATE_ALL:
+            return state.map(item => ({ ...item, ...action.payload }));
         case DELETE:
             return state.filter(item => item.id !== action.payload.id);
         default:
