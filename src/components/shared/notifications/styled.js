@@ -2,25 +2,33 @@ import styled, { keyframes } from 'styled-components';
 import { Tile } from 'components/shared';
 import { BaseGrid } from 'components/shared/layout/styled';
 
+const fade = keyframes`
+{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+`;
+
 export const Wrapper = styled.div`
-    margin: 1em 0 0 0;
+    .ReactCollapse--collapse {
+        transition: height 200ms;
+    }
+
+    .notification-fading {
+        animation: ${fade} 200ms;
+    }
 `;
 
 export const Grid = styled(BaseGrid)``;
 
-const fade = keyframes`
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-        }
-`;
-
 export const NotificationTile = styled(Tile)`
+    margin: 1em 0 0 0;
     background-color: ${props => props.theme.default};
-    height: auto;
-
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -30,9 +38,6 @@ export const NotificationTile = styled(Tile)`
     p,
     i {
         color: ${props => props.theme.text};
-    }
-    .notification-fading {
-        animation: 0.2s ${fade};
     }
 `;
 

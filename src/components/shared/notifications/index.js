@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
 import { AppContext } from 'components/context';
+import { Collapse } from 'react-collapse';
 import {
     Wrapper,
     Grid,
     NotificationTile,
-    // NotificationBody,
     NotificationContent,
     RingbellIcon,
     CloseButton,
 } from './styled';
-import './index.css';
+// import './index.css';
 
 export const Notifications = () => {
     const { notifications, showNotification, setShowNotification } = useContext(
@@ -20,14 +20,14 @@ export const Notifications = () => {
         e.currentTarget
             .closest('.notification-tile')
             .classList.add('notification-fading');
-        setTimeout(() => setShowNotification(false), 300);
+        setShowNotification(false);
     };
 
     return (
         <Wrapper>
-            <Grid>
-                {showNotification &&
-                    notifications &&
+            <Collapse isOpened={showNotification}>
+                {/* <Grid> */}
+                {notifications &&
                     notifications.map(notification => (
                         <NotificationTile
                             key={notification.id}
@@ -50,7 +50,8 @@ export const Notifications = () => {
                             </CloseButton>
                         </NotificationTile>
                     ))}
-            </Grid>
+                {/* </Grid> */}
+            </Collapse>
         </Wrapper>
     );
 };
