@@ -1,51 +1,51 @@
 {
     "posts": [
         {
-            "id": "100",
+            "id": "5f3a69f26413d2b5e31b1a13",
             "title": "Failure is simply the opportunity to begin again, this time more intelligently.",
             "body": "What if a surgeon or patient could train or prepare for a complex procedure by simulating it first in a 360-degree, 3D simulation? What if a patient could put aside the pamphlets and actually see the impact a diet would have on his or her future appearance? What if impaired mobility patients could experience brain- and coordination-building activities in complete safety? \nImmersive \"digital reality\" tools such as augmented reality (AR) and virtual reality (VR) are making these scenarios increasingly realistic. As with many earlier technology waves, VR and AR got an early boost from frivolous uses and are graduating to more constructive roles. Barriers to technology, cost, and content are beginning to fall, and early adopters are already hard at work.",
             "published": true,
-            "author_id": "1488",
+            "author_id": "5f3a6a12e095cf37af5e573e",
             "image": null
         },
         {
-            "id": "101",
+            "id": "5f3a6a03df0cc0ba6322ff97",
             "title": "We did it!",
             "body": "Combining technological innovation, entrepreneurship, and rapid growth, the Fast 500 companies—both large and small, public and private—lead and transform the way we do business today.",
             "published": true,
-            "author_id": "1489",
+            "author_id": "5f3a6a1954571b9cde4c04a2",
             "image": "Happy-Business-Computer-People-1.png"
         },
         {
-            "id": "102",
+            "id": "5f3a6a09d3d9b86f08f389fe",
             "title": "Mollitia eaque culpa amet perferendis esse nulla facilis nemo, adipisci sit odit",
             "body": "Voluptatum nesciunt suscipit aperiam saepe vitae eius doloremque nemo in! Corrupti tenetur inventore natus dicta voluptates excepturi eligendi",
             "published": true,
-            "author_id": "1490",
+            "author_id": "5f3a6a23d6824c6d32d57e89",
             "image": null
         }
     ],
     "users": [
         {
-            "id": "1488",
+            "id": "5f3a6a12e095cf37af5e573e",
             "name": "Sierra Ferguson",
             "title": "TPM",
             "image": "face00001.png"
         },
         {
-            "id": "1489",
+            "id": "5f3a6a1954571b9cde4c04a2",
             "name": "Lina Lake",
             "title": "Head of manager dept.",
             "image": "face00004.png"
         },
         {
-            "id": "1490",
+            "id": "5f3a6a23d6824c6d32d57e89",
             "name": "Glen Moore",
             "title": "Head of QA dept.",
             "image": "face00003.png"
         },
         {
-            "id": "1491",
+            "id": "5f3a6a2c583849595c4429b8",
             "name": "George Fields",
             "title": "Head of QA dept.",
             "image": "face00002.png"
@@ -53,63 +53,63 @@
     ],
     "projects": [
         {
-            "id": "1",
+            "id": "5f3a6a33f58a1ac4bb6f1a74",
             "name": "Alpha project",
             "status": 52,
             "company": "Inceptos Hymenaeos Ltd",
             "release_date": "Nov 12, 2019"
         },
         {
-            "id": "2",
+            "id": "5f3a6a39cca984e5e597466c",
             "name": "Betha project",
             "status": 23,
             "company": "Nec Euismod In Company",
             "release_date": "Dec 9, 2019"
         },
         {
-            "id": "3",
+            "id": "5f3a6a3fdf1bc7f890c896fc",
             "name": "Gamma project",
             "status": 25,
             "company": "Erat Volutpat Tellus Ltd",
             "release_date": "Dec 25, 2019"
         },
         {
-            "id": "4",
+            "id": "5f3a6a44ed5a35bf31dc3f9d",
             "name": "Sigma project",
             "status": 48,
             "company": "Hymenaeos Ltd",
             "release_date": "Nov 25, 2019"
         },
         {
-            "id": "5",
+            "id": "5f3a6a4b6450228c504b7aa5",
             "name": "Kappa project",
             "status": 89,
             "company": "Gessertinno Llc",
             "release_date": "Oct 20, 2019"
         },
         {
-            "id": "6",
+            "id": "5f3a6a52be3e9681f0599207",
             "name": "Omega project",
             "status": 56,
             "company": "Umbralora Montro",
             "release_date": "Nov 22, 2019"
         },
         {
-            "id": "7",
+            "id": "5f3a6a585f31435baf504011",
             "name": "Tetha project",
             "status": 95,
             "company": "Poprisi Company",
             "release_date": "Oct 16, 2019"
         },
         {
-            "id": "9",
+            "id": "5f3a6a5de689017f1cd55017",
             "name": "Delta project",
             "status": 85,
             "company": "Fergana ",
             "release_date": "Oct 25, 2019"
         },
         {
-            "id": "8",
+            "id": "5f3a6a63efa1ad38f3ac3fb4",
             "name": "Epsilon project",
             "status": 75,
             "company": "Trast National",
@@ -124,8 +124,14 @@
     },
     "notifications": [
         {
-            "id": "201",
-            "text": "Don’t forget to publish weekly notes about manager’s work!"
+            "id": "5f3a6a705c8d028b81f7d590",
+            "text": "Don’t forget to publish weekly notes about manager’s work!",
+            "show": true
+        },
+        {
+            "id": "5f3a6a705c8d028b81f7d590",
+            "text": "Another notification to show",
+            "show": false
         }
     ]
 }
