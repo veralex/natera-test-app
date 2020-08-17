@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper } from './styled';
 
 const FileInput = ({ value, name, onChange = () => {} }) => {
@@ -21,6 +22,12 @@ const FileInput = ({ value, name, onChange = () => {} }) => {
             />
         </Wrapper>
     );
+};
+
+FileInput.propTypes = {
+    value: PropTypes.any,
+    name: PropTypes.string,
+    onChange: PropTypes.func,
 };
 
 export { FileInput };

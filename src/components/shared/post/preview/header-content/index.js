@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import { postType } from 'components/types';
 import { Wrapper } from './styled';
 import { Button } from 'components/shared';
 import { AppContext } from 'components/context';
 
-export const HeaderContent = ({ post }) => {
+const HeaderContent = ({ post }) => {
     const { publishPost, unpublishPost, removePost } = useContext(AppContext);
     return (
         <Wrapper>
@@ -39,3 +40,9 @@ export const HeaderContent = ({ post }) => {
         </Wrapper>
     );
 };
+
+HeaderContent.propTypes = {
+    post: postType.isRequired,
+};
+
+export { HeaderContent };

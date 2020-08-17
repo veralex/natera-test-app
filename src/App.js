@@ -4,7 +4,7 @@ import { Router, AppProvider } from './components';
 import { Modal, Footer } from './components/shared';
 import theme from './theme';
 
-export default () => {
+const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <AppProvider>
@@ -15,3 +15,7 @@ export default () => {
         </ThemeProvider>
     );
 };
+
+App.displayName = 'NateraTestApp';
+
+export { App };

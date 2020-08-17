@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { projectType } from 'components/types';
 import { useMediaQuery } from 'react-responsive';
 import { Row } from './row';
 import { Label } from 'components/shared';
 import { StyledTable } from './styled';
 
-export const Table = ({ projects, edit }) => {
+const Table = ({ projects, edit }) => {
     const isLarge = !useMediaQuery({ maxWidth: '375px' });
 
     return (
@@ -38,3 +40,10 @@ export const Table = ({ projects, edit }) => {
         </StyledTable>
     );
 };
+
+Table.propTypes = {
+    projects: PropTypes.arrayOf(projectType),
+    edit: PropTypes.bool,
+};
+
+export { Table };

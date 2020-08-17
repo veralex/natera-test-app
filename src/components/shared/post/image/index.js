@@ -1,7 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { postType } from 'components/types';
 import { ImageWrapper } from './styled';
 
-export const PostImage = ({ post, showTitle = true }) => {
+const PostImage = ({ post, showTitle = true }) => {
     let img;
     if (post.image)
         img = post.image.startsWith('data:image')
@@ -16,3 +18,10 @@ export const PostImage = ({ post, showTitle = true }) => {
         )
     );
 };
+
+PostImage.propTypes = {
+    post: postType.isRequired,
+    showTitle: PropTypes.bool.isRequired,
+};
+
+export { PostImage };

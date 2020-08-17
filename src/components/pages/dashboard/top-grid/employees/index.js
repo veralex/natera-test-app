@@ -21,7 +21,7 @@ export const Employees = () => {
                     </Row>
                     <Row>
                         <ColoredText>
-                            <span>You're in top</span>
+                            <span>{"You're in top"}</span>
                             <code> {employees.selection}%</code>
                         </ColoredText>
                     </Row>

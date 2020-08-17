@@ -8,8 +8,8 @@ const AutocompleteInput = ({
     name,
     label,
     value,
-    onChange = e => {},
-    onSelect = e => {},
+    onChange = () => {},
+    onSelect = () => {},
     source,
 }) => {
     const context = useContext(AppContext);
@@ -51,7 +51,7 @@ const AutocompleteInput = ({
 };
 
 AutocompleteInput.propTypes = {
-    name: PropTypes.string,
+    name: PropTypes.string.isRequired,
     label: PropTypes.string,
     value: PropTypes.string.isRequired,
     onChange: PropTypes.func,

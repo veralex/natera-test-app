@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
+import { projectType } from 'components/types';
+import PropTypes from 'prop-types';
 import { AppContext } from 'components/context';
 
-export const RemoveButton = ({ project, onClickHandler }) => {
+const RemoveButton = ({ project, onClickHandler }) => {
     const { removeProject } = useContext(AppContext);
 
     return (
@@ -13,3 +15,10 @@ export const RemoveButton = ({ project, onClickHandler }) => {
         </div>
     );
 };
+
+RemoveButton.propTypes = {
+    project: projectType,
+    onClickHandler: PropTypes.func,
+};
+
+export { RemoveButton };

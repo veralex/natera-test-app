@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactSwitch from 'react-switch';
 import { Wrapper, Label } from './styled';
 
-const Switch = ({ label, value, onChange = e => {} }) => {
+const Switch = ({ label, value, onChange = () => {} }) => {
     return (
         <Wrapper>
             <ReactSwitch

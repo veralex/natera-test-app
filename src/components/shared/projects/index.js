@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { SectionHeader } from '..';
 import { Table } from './table';
 import { AppContext } from 'components/context';
 import { TableTile, Grid } from './styled';
 
-export const Projects = ({ edit }) => {
+const Projects = ({ edit }) => {
     const { projects } = useContext(AppContext);
 
     return (
@@ -18,3 +19,9 @@ export const Projects = ({ edit }) => {
         </>
     );
 };
+
+Projects.propTypes = {
+    edit: PropTypes.bool,
+};
+
+export { Projects };

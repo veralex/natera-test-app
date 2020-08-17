@@ -1,8 +1,9 @@
 import React, { useContext, useMemo } from 'react';
+import { postType } from 'components/types';
 import { AppContext } from 'components/context';
 import { Wrapper, Avatar, Body } from './styled';
 
-export const Author = ({ post }) => {
+const Author = ({ post }) => {
     const { users } = useContext(AppContext);
     const user = useMemo(() => users.find(u => u.id === post.author_id), [
         users,
@@ -25,3 +26,9 @@ export const Author = ({ post }) => {
         </Wrapper>
     );
 };
+
+Author.propTypes = {
+    post: postType.isRequired,
+};
+
+export { Author };

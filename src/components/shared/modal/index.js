@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import { useMediaQuery } from 'react-responsive';
 import Rodal from 'rodal';
@@ -6,7 +7,7 @@ import { AppContext } from 'components/context';
 import { ModalFooterDivider, ModalContent } from './styled';
 import './modal.css';
 
-export const Modal = ({ children }) => {
+const Modal = ({ children }) => {
     const { modalOpen, setModalOpen } = useContext(AppContext);
     const isMobile = useMediaQuery({ maxWidth: '375px' });
     return (
@@ -28,3 +29,9 @@ export const Modal = ({ children }) => {
         </Rodal>
     );
 };
+
+Modal.propTypes = {
+    children: PropTypes.node,
+};
+
+export { Modal };

@@ -18,7 +18,7 @@ export const Highlights = () => {
                             <PostPreview
                                 post={post}
                                 action="show"
-                                onClick={e => {
+                                onClick={() => {
                                     setModalOpen(true);
                                     GeneratePostShowComponent({
                                         post,

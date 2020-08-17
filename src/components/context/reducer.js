@@ -6,6 +6,7 @@ export const reducer = (state, action) => {
         case CREATE:
             // IMPORTANT! Modifying payload in reducer is not acceptable!
             // But since it's demo I did it
+            // eslint-disable-next-line no-case-declarations
             const data = action.payload.map(item => {
                 if (!item.id) {
                     item.id = new ObjectID().toString();

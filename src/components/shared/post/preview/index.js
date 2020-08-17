@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import { postType } from 'components/types';
 import { Button } from 'components/shared';
 import { Author, PostCreateForm } from 'components/shared/post';
 import { HeaderContent } from './header-content';
@@ -86,7 +87,8 @@ const PostPreview = ({ action = 'show', post, onClick }) => {
 
 PostPreview.propTypes = {
     action: PropTypes.oneOf(['show', 'create', 'edit']),
-    post: PropTypes.object,
+    post: postType,
+    onClick: PropTypes.func,
 };
 
 export { PostPreview };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useMediaQuery } from 'react-responsive';
 import { createBrowserHistory } from 'history';
 import { Router, Route, NavLink, Switch, Redirect } from 'react-router-dom';
@@ -6,6 +7,8 @@ import RouterCarousel from 'react-router-carousel';
 import { Dashboard } from 'components/pages/dashboard';
 import { Edit } from 'components/pages/edit';
 import { Menu } from './styled';
+
+const history = createBrowserHistory();
 
 const Carousel = ({ isDesktop }) => {
     return (
@@ -18,7 +21,9 @@ const Carousel = ({ isDesktop }) => {
     );
 };
 
-const history = createBrowserHistory();
+Carousel.propTypes = {
+    isDesktop: PropTypes.bool.isRequired,
+};
 
 const AppRouter = () => {
     const isDesktop = !useMediaQuery({ maxWidth: '375px' });

@@ -1,7 +1,8 @@
 import React from 'react';
+import { postType } from 'components/types';
 import { TextWrapper, ImageWrapper } from './styled';
 
-export const BodyPreview = ({ post }) => {
+const BodyPreview = ({ post }) => {
     let img;
     if (post.image)
         img = post.image.startsWith('data:image')
@@ -20,3 +21,9 @@ export const BodyPreview = ({ post }) => {
         </TextWrapper>
     );
 };
+
+BodyPreview.propTypes = {
+    post: postType,
+};
+
+export { BodyPreview };

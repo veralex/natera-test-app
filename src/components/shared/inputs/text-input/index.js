@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Wrapper } from '../wrapper';
 
-const TextInput = ({ name, label, value, onChange = e => {}, children }) => {
+const TextInput = ({ name, label, value, onChange = () => {}, children }) => {
     const inputProps = {
         name,
         value,
@@ -19,6 +20,14 @@ const TextInput = ({ name, label, value, onChange = e => {}, children }) => {
             )}
         </Wrapper>
     );
+};
+
+TextInput.propTypes = {
+    name: PropTypes.string.isRequired,
+    label: PropTypes.string,
+    value: PropTypes.any,
+    onChange: PropTypes.func,
+    children: PropTypes.element,
 };
 
 export { TextInput };

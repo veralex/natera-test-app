@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import {
     TextInput,
     FileInput,
@@ -9,7 +10,7 @@ import {
 import { ModalFooter, ModalContentWrapper } from '../styled';
 import { CreateForm, Title, CreateControl } from './styled';
 
-export const PostCreateForm = ({ createPost, cancel }) => {
+const PostCreateForm = ({ createPost, cancel }) => {
     const initialState = {
         title: '',
         body: '',
@@ -112,3 +113,10 @@ export const PostCreateForm = ({ createPost, cancel }) => {
         </ModalContentWrapper>
     );
 };
+
+PostCreateForm.propTypes = {
+    createPost: PropTypes.func,
+    cancel: PropTypes.func,
+};
+
+export { PostCreateForm };

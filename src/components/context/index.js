@@ -1,7 +1,6 @@
 import React, { createContext, useState, useReducer } from 'react';
+import PropTypes from 'prop-types';
 import { reducer } from './reducer';
-// import { Posts } from './posts';
-// import { Projects } from './projects';
 import { postActions, projectActions, notificationActions } from './actions';
 import json from 'assets/data.json';
 
@@ -13,9 +12,7 @@ const defaultContext = {
 
 export const AppContext = createContext(defaultContext);
 
-export const AppProvider = props => {
-    const { children } = props;
-
+const AppProvider = ({ children }) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     const [posts, dispatchPosts] = useReducer(reducer, json.posts);
@@ -40,3 +37,9 @@ export const AppProvider = props => {
 
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
+
+AppProvider.propTypes = {
+    children: PropTypes.node.isRequired,
+};
+
+export { AppProvider };

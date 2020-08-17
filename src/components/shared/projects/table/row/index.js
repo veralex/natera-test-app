@@ -1,11 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { projectType } from 'components/types';
 import { useMediaQuery } from 'react-responsive';
 import { RemoveButton } from './remove-button';
 import { StatusBar } from './status-bar';
 import { TableRow, RemoveButtonCell } from './styled';
 import './index.css';
 
-export const Row = ({ project, edit = false }) => {
+const Row = ({ project, edit = false }) => {
     const isLarge = !useMediaQuery({ maxWidth: '375px' });
 
     const onProjectDelete = (e, callback) => {
@@ -46,3 +48,10 @@ export const Row = ({ project, edit = false }) => {
         </TableRow>
     );
 };
+
+Row.propTypes = {
+    project: projectType,
+    edit: PropTypes.bool,
+};
+
+export { Row };
