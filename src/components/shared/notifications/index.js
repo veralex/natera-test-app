@@ -1,60 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { AppContext } from 'components/context';
-import { Collapse } from 'react-collapse';
-import {
-    Wrapper,
-    Grid,
-    GridRow,
-    NotificationTile,
-    NotificationContent,
-    RingbellIcon,
-    CloseButton,
-} from './styled';
+import { Wrapper, Grid, GridRow } from './styled';
+import { Notification } from './notification';
 
 export const Notifications = () => {
-    const { notifications, showNotification, setShowNotification } = useContext(
-        AppContext
-    );
+    const { notifications, hideNotification } = useContext(AppContext);
 
-    const handleClose = e => {
-        e.currentTarget
-            .closest('.notification-tile')
-            .classList.add('notification-fading');
-        setShowNotification(false);
-    };
+    const visibleNotifications = useMemo(
+        () => notifications.filter(n => n.show),
+        [notifications]
+    );
 
     return (
         <Wrapper>
-            <Collapse isOpened={showNotification}>
-                <Grid>
-                    {notifications &&
-                        notifications.map(notification => (
-                            <GridRow>
-                                <NotificationTile
-                                    key={notification.id}
-                                    className="notification-tile"
-                                >
-                                    <RingbellIcon className="material-icons">
-                                        notifications_none
-                                    </RingbellIcon>
-                                    <NotificationContent>
-                                        <p>{notification.text}</p>
-                                        <p className="notification-label-text">
-                                            Notification will be closed after 8
-                                            seconds
-                                        </p>
-                                    </NotificationContent>
-                                    <CloseButton
-                                        className="material-icons"
-                                        onClick={handleClose}
-                                    >
-                                        clear
-                                    </CloseButton>
-                                </NotificationTile>
-                            </GridRow>
-                        ))}
-                </Grid>
-            </Collapse>
+            <Grid>
+                {visibleNotifications.map(notification => (
+                    <GridRow key={notification.id}>
+                        <Notification
+                            notification={notification}
+                            hideNotification={hideNotification}
+                        />
+                    </GridRow>
+                ))}
+            </Grid>
         </Wrapper>
     );
 };
