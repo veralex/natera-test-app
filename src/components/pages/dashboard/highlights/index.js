@@ -4,7 +4,7 @@ import { SectionHeader } from 'components/shared';
 import { PostPreview, GeneratePostShowComponent } from 'components/shared/post';
 import { Grid, AnimatedTile } from './styled';
 
-export const Highlights = React.memo(() => {
+export const Highlights = () => {
     const { posts, setModalOpen } = useContext(AppContext);
     return (
         <div>
@@ -31,4 +31,4 @@ export const Highlights = React.memo(() => {
             </Grid>
         </div>
     );
-});
+};

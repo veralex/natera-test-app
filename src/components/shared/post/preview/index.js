@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { Button } from 'components/shared';
 import { Author, PostCreateForm } from 'components/shared/post';
@@ -13,7 +12,7 @@ import { Wrapper, Icon, Label } from './styled';
 
 import theme from 'components/../theme';
 
-const PostComponent = ({ action, post, onClick }) => {
+const PostPreview = ({ action = 'show', post, onClick }) => {
     const { createPost, setModalOpen, modalOpen } = useContext(AppContext);
 
     useEffect(() => {
@@ -85,17 +84,9 @@ const PostComponent = ({ action, post, onClick }) => {
     );
 };
 
-PostComponent.propTypes = {
+PostPreview.propTypes = {
     action: PropTypes.oneOf(['show', 'create', 'edit']),
     post: PropTypes.object,
 };
-
-PostComponent.defaultProps = {
-    action: 'show',
-};
-
-const PostPreview = React.memo(PostComponent, (prevProps, nextProps) =>
-    _.isEqual(prevProps, nextProps)
-);
 
 export { PostPreview };
