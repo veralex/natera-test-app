@@ -1,4 +1,4 @@
-import React, { useContext, useState, useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { AppContext } from 'components/context';
 import { Wrapper, Avatar, Body } from './styled';
 
@@ -9,8 +9,8 @@ export const Author = ({ post }) => {
         post,
     ]);
 
-    const [img, setImg] = useState(null);
-    import(`assets/${user.image}`).then(res => setImg(res.default));
+    let img;
+    if (post.image) img = require(`assets/${user.image}`);
 
     return (
         <Wrapper>

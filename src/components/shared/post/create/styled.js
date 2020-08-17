@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { SectionHeader } from '../../';
 
 export const CreateForm = styled.form`
     display: flex;
@@ -8,9 +7,6 @@ export const CreateForm = styled.form`
     height: 100%;
     position: relative;
     width: 100%;
-    /* ${SectionHeader} {
-        padding-left: 0px;
-    } */
 `;
 
 export const Title = styled.h1`

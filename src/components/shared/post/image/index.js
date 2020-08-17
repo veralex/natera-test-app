@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ImageWrapper } from './styled';
 
 export const PostImage = ({ post, showTitle = true }) => {
-    const [img, setImg] = useState(
-        post.image?.startsWith('data:image') ? post.image : null
-    );
-    if (post.image && !img)
-        import(`assets/${post.image}`).then(res => setImg(res.default));
+    let img;
+    if (post.image) img = require(`assets/${post.image}`);
+
     return (
         img && (
             <ImageWrapper img={img}>
