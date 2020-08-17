@@ -23,10 +23,18 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Grid = styled(BaseGrid)``;
+export const Grid = styled(BaseGrid)`
+    grid-gap: 0.25em;
+    @media (max-width: 375px) {
+        margin: 0em 1em;
+    }
+`;
+
+export const GridRow = styled.div`
+    margin: 1em 0 0 0;
+`;
 
 export const NotificationTile = styled(Tile)`
-    margin: 1em 0 0 0;
     background-color: ${props => props.theme.default};
     height: 100%;
     display: flex;
@@ -38,6 +46,9 @@ export const NotificationTile = styled(Tile)`
     p,
     i {
         color: ${props => props.theme.text};
+    }
+    @media (max-width: 375px) {
+        padding: 1sem 1em;
     }
 `;
 

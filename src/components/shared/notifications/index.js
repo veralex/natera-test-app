@@ -4,12 +4,12 @@ import { Collapse } from 'react-collapse';
 import {
     Wrapper,
     Grid,
+    GridRow,
     NotificationTile,
     NotificationContent,
     RingbellIcon,
     CloseButton,
 } from './styled';
-// import './index.css';
 
 export const Notifications = () => {
     const { notifications, showNotification, setShowNotification } = useContext(
@@ -26,31 +26,34 @@ export const Notifications = () => {
     return (
         <Wrapper>
             <Collapse isOpened={showNotification}>
-                {/* <Grid> */}
-                {notifications &&
-                    notifications.map(notification => (
-                        <NotificationTile
-                            key={notification.id}
-                            className="notification-tile"
-                        >
-                            <RingbellIcon className="material-icons">
-                                notifications_none
-                            </RingbellIcon>
-                            <NotificationContent>
-                                <p>{notification.text}</p>
-                                <p className="notification-label-text">
-                                    Notification will be closed after 8 seconds
-                                </p>
-                            </NotificationContent>
-                            <CloseButton
-                                className="material-icons"
-                                onClick={handleClose}
-                            >
-                                clear
-                            </CloseButton>
-                        </NotificationTile>
-                    ))}
-                {/* </Grid> */}
+                <Grid>
+                    {notifications &&
+                        notifications.map(notification => (
+                            <GridRow>
+                                <NotificationTile
+                                    key={notification.id}
+                                    className="notification-tile"
+                                >
+                                    <RingbellIcon className="material-icons">
+                                        notifications_none
+                                    </RingbellIcon>
+                                    <NotificationContent>
+                                        <p>{notification.text}</p>
+                                        <p className="notification-label-text">
+                                            Notification will be closed after 8
+                                            seconds
+                                        </p>
+                                    </NotificationContent>
+                                    <CloseButton
+                                        className="material-icons"
+                                        onClick={handleClose}
+                                    >
+                                        clear
+                                    </CloseButton>
+                                </NotificationTile>
+                            </GridRow>
+                        ))}
+                </Grid>
             </Collapse>
         </Wrapper>
     );
