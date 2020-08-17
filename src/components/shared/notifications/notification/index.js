@@ -15,9 +15,10 @@ const Notification = ({ notification, hideNotification }) => {
 
     const handleClose = useCallback(
         container => {
-            setCollapsing(true);
-            if (container?.current)
+            if (container?.current) {
+                setCollapsing(true);
                 container.current.classList.add('notification-fading');
+            }
             clearTimeout(timerID);
             setTimeout(() => hideNotification(notification.id), 200);
         },
