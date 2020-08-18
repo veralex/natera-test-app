@@ -18,7 +18,7 @@ const Button = ({
     );
 
 Button.propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.string,
     onClick: PropTypes.func,
     size: PropTypes.oneOf(['small', 'standard', 'large']),
     variant: PropTypes.oneOf(['filled', 'outlined']),
@@ -27,4 +27,6 @@ Button.propTypes = {
     disabled: PropTypes.bool,
 };
 
-export { Button };
+const Memoized = React.memo(Button);
+
+export { Memoized as Button };

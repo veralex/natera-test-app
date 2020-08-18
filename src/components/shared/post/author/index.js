@@ -31,4 +31,6 @@ Author.propTypes = {
     post: postType.isRequired,
 };
 
-export { Author };
+const Memoized = React.memo(Author);
+
+export { Memoized as Author };

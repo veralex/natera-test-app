@@ -1,11 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
 import { Label } from 'components/shared';
 import chart from 'assets/deals_graphic.png';
 import { ColumnWrapper, Column, Link, LinkRow, Wrapper, Chart } from './styled';
 import { ColoredText, Row, BigText, Icon } from '../shared/styled';
+import { AppContext } from 'components/context';
 
-const Statistics = ({ data }) => {
+const Statistics = () => {
+    const { statistics } = useContext(AppContext);
     return (
         <Wrapper>
             <ColumnWrapper>
@@ -13,11 +14,11 @@ const Statistics = ({ data }) => {
                     <Label>Earnings</Label>
                     <Row>
                         <Icon className="material-icons">attach_money</Icon>
-                        <BigText>{data.earnings.revenue}</BigText>
+                        <BigText>{statistics.earnings.revenue}</BigText>
                     </Row>
                     <Row>
                         <ColoredText>
-                            <code>+{data.earnings.growth}%</code>
+                            <code>+{statistics.earnings.growth}%</code>
                             <span> since last year</span>
                         </ColoredText>
                     </Row>
@@ -32,10 +33,6 @@ const Statistics = ({ data }) => {
             </LinkRow>
         </Wrapper>
     );
-};
-
-Statistics.propTypes = {
-    data: PropTypes.any,
 };
 
 const Memoized = React.memo(Statistics);

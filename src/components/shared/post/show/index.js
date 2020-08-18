@@ -55,4 +55,6 @@ GeneratePostShowComponent.propTypes = {
     close: PropTypes.func,
 };
 
-export { PostShow, GeneratePostShowComponent };
+const Memoized = React.memo(PostShow);
+
+export { Memoized as PostShow, GeneratePostShowComponent };

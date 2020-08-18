@@ -24,4 +24,6 @@ PostImage.propTypes = {
     showTitle: PropTypes.bool.isRequired,
 };
 
-export { PostImage };
+const Memoized = React.memo(PostImage);
+
+export { Memoized as PostImage };

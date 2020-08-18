@@ -59,4 +59,6 @@ AutocompleteInput.propTypes = {
     source: PropTypes.string.isRequired,
 };
 
-export { AutocompleteInput };
+const Memoized = React.memo(AutocompleteInput);
+
+export { Memoized as AutocompleteInput };

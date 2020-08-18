@@ -10,7 +10,7 @@ import { Menu } from './styled';
 
 const history = createBrowserHistory();
 
-const Carousel = ({ isDesktop }) => {
+const CarouselComponent = ({ isDesktop }) => {
     return (
         <RouterCarousel>
             <Route path="/" component={Dashboard} />
@@ -21,9 +21,11 @@ const Carousel = ({ isDesktop }) => {
     );
 };
 
-Carousel.propTypes = {
+CarouselComponent.propTypes = {
     isDesktop: PropTypes.bool.isRequired,
 };
+
+const Carousel = React.memo(CarouselComponent);
 
 const AppRouter = () => {
     const isDesktop = !useMediaQuery({ maxWidth: '375px' });
@@ -61,4 +63,6 @@ const AppRouter = () => {
     );
 };
 
-export { AppRouter as Router };
+const Memoized = React.memo(AppRouter);
+
+export { Memoized as Router };

@@ -16,3 +16,9 @@ export const projectType = shape({
     company: string,
     release_date: string,
 });
+
+export const notificationType = shape({
+    id: string.isRequired,
+    text: string,
+    show: bool.isRequired,
+});

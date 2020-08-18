@@ -30,4 +30,6 @@ FileInput.propTypes = {
     onChange: PropTypes.func,
 };
 
-export { FileInput };
+const Memoized = React.memo(FileInput);
+
+export { Memoized as FileInput };

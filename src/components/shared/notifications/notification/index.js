@@ -58,4 +58,6 @@ Notification.propTypes = {
     hideNotification: PropTypes.func.isRequired,
 };
 
-export { Notification };
+const Memoized = React.memo(Notification);
+
+export { Memoized as Notification };

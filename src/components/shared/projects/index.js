@@ -24,4 +24,6 @@ Projects.propTypes = {
     edit: PropTypes.bool,
 };
 
-export { Projects };
+const Memoized = React.memo(Projects);
+
+export { Memoized as Projects };

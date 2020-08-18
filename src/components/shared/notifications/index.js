@@ -3,7 +3,7 @@ import { AppContext } from 'components/context';
 import { Wrapper, Grid, GridRow } from './styled';
 import { Notification } from './notification';
 
-export const Notifications = () => {
+const Notifications = () => {
     const { notifications, hideNotification } = useContext(AppContext);
 
     const visibleNotifications = useMemo(
@@ -26,3 +26,7 @@ export const Notifications = () => {
         </Wrapper>
     );
 };
+
+const Memoized = React.memo(Notifications);
+
+export { Memoized as Notifications };

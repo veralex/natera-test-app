@@ -1,12 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useContext } from 'react';
+import { AppContext } from 'components/context';
 import { Wrapper, TopGrid, Icon, Divider } from './styled';
 import { Row, BigText, ColoredText } from '../shared/styled';
 import { Label } from 'components/shared';
 import { Chip } from './chip';
 
-const Employees = ({ data }) => {
-    const { employees, projects, specialization } = data;
+const Employees = () => {
+    const { statistics } = useContext(AppContext);
+    const { employees, projects, specialization } = statistics;
     return (
         <Wrapper>
             <TopGrid>
@@ -55,10 +56,6 @@ const Employees = ({ data }) => {
             </div>
         </Wrapper>
     );
-};
-
-Employees.propTypes = {
-    data: PropTypes.any,
 };
 
 const Memoized = React.memo(Employees);

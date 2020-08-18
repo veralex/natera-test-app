@@ -9,7 +9,7 @@ const SectionHeader = ({ children, className }) => (
 );
 
 SectionHeader.propTypes = {
-    children: PropTypes.any,
+    children: PropTypes.string,
     className: PropTypes.string,
 };
 

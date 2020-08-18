@@ -26,4 +26,6 @@ BodyPreview.propTypes = {
     post: postType,
 };
 
-export { BodyPreview };
+const Memoized = React.memo(BodyPreview);
+
+export { Memoized as BodyPreview };

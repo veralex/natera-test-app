@@ -5,7 +5,7 @@ import { Wrapper, Grid } from './styled';
 import { AppContext } from 'components/context';
 import './index.css';
 
-export const Highlights = () => {
+const Highlights = () => {
     const { posts } = useContext(AppContext);
     const postsToShow = posts.slice(-11);
 
@@ -39,3 +39,7 @@ export const Highlights = () => {
         </Wrapper>
     );
 };
+
+const Memoized = React.memo(Highlights);
+
+export { Memoized as Highlights };

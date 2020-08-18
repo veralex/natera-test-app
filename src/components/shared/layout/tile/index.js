@@ -13,7 +13,7 @@ const Tile = ({ children, className, height }) => {
 Tile.propTypes = {
     className: PropTypes.string,
     height: PropTypes.string,
-    children: PropTypes.any,
+    children: PropTypes.element,
 };
 
 export { Tile };

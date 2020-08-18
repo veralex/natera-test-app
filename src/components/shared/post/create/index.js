@@ -119,4 +119,6 @@ PostCreateForm.propTypes = {
     cancel: PropTypes.func,
 };
 
-export { PostCreateForm };
+const Memoized = React.memo(PostCreateForm);
+
+export { Memoized as PostCreateForm };

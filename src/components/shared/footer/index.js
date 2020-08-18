@@ -12,4 +12,6 @@ Footer.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-export { Footer };
+const Memoized = React.memo(Footer);
+
+export { Memoized as Footer };

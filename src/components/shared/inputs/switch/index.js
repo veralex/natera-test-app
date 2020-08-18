@@ -27,4 +27,6 @@ Switch.propTypes = {
     onChange: PropTypes.func,
 };
 
-export { Switch };
+const Memoized = React.memo(Switch);
+
+export { Memoized as Switch };

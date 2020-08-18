@@ -3,7 +3,7 @@ import { AppContext } from 'components/context';
 import { SectionHeader, Switch } from 'components/shared';
 import { Wrapper } from './styled';
 
-export const NotificationsSwitch = () => {
+const NotificationsSwitch = () => {
     const { showAllNotifications } = useContext(AppContext);
     const [show, setShow] = useState(false);
 
@@ -24,3 +24,7 @@ export const NotificationsSwitch = () => {
         </>
     );
 };
+
+const Memoized = React.memo(NotificationsSwitch);
+
+export { Memoized as NotificationsSwitch };

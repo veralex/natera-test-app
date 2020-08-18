@@ -10,7 +10,6 @@ import { BodyPreview } from './body-preview';
 import { AppContext } from 'components/context';
 import { ThemeProvider } from 'styled-components';
 import { Wrapper, Icon, Label } from './styled';
-
 import theme from 'components/../theme';
 
 const PostPreview = ({ action = 'show', post, onClick }) => {
@@ -91,4 +90,6 @@ PostPreview.propTypes = {
     onClick: PropTypes.func,
 };
 
-export { PostPreview };
+const Memoized = React.memo(PostPreview);
+
+export { Memoized as PostPreview };

@@ -45,4 +45,6 @@ HeaderContent.propTypes = {
     post: postType.isRequired,
 };
 
-export { HeaderContent };
+const Memoized = React.memo(HeaderContent);
+
+export { Memoized as HeaderContent };

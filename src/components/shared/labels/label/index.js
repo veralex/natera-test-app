@@ -10,7 +10,7 @@ const Label = ({ className, children, ...rest }) => (
 
 Label.propTypes = {
     className: PropTypes.string,
-    children: PropTypes.any,
+    children: PropTypes.node,
 };
 
 export { Label };
