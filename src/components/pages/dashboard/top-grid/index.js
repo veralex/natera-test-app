@@ -26,7 +26,7 @@ const TopGrid = ({ data }) => {
 };
 
 TopGrid.propTypes = {
-    data: PropTypes.shape.isRequired,
+    data: PropTypes.any,
 };
 
 const Memoized = React.memo(TopGrid);

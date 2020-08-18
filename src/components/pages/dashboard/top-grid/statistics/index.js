@@ -35,7 +35,7 @@ const Statistics = ({ data }) => {
 };
 
 Statistics.propTypes = {
-    data: PropTypes.shape.isRequired,
+    data: PropTypes.any,
 };
 
 const Memoized = React.memo(Statistics);

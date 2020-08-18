@@ -58,7 +58,7 @@ const Employees = ({ data }) => {
 };
 
 Employees.propTypes = {
-    data: PropTypes.shape.isRequired,
+    data: PropTypes.any,
 };
 
 const Memoized = React.memo(Employees);

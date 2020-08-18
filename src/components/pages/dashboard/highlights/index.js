@@ -35,7 +35,7 @@ const Highlights = ({ data }) => {
 };
 
 Highlights.propTypes = {
-    data: PropTypes.shape.isRequired,
+    data: PropTypes.array,
 };
 const Memoized = React.memo(Highlights);
 
