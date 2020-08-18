@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { AppContext } from 'components/context';
 import { SectionHeader } from 'components/shared';
 import { PostPreview, GeneratePostShowComponent } from 'components/shared/post';
 import { Grid, AnimatedTile } from './styled';
 
-export const Highlights = () => {
-    const { posts, setModalOpen } = useContext(AppContext);
+const Highlights = ({ data }) => {
+    const { setModalOpen } = useContext(AppContext);
     return (
         <div>
             <SectionHeader>Highlights</SectionHeader>
             <Grid>
-                {posts
+                {data
                     .filter(post => post.published)
                     .slice(-8)
                     .map(post => (
@@ -32,3 +33,10 @@ export const Highlights = () => {
         </div>
     );
 };
+
+Highlights.propTypes = {
+    data: PropTypes.shape.isRequired,
+};
+const Memoized = React.memo(Highlights);
+
+export { Memoized as Highlights };

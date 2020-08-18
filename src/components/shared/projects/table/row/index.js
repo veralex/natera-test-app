@@ -54,4 +54,6 @@ Row.propTypes = {
     edit: PropTypes.bool,
 };
 
-export { Row };
+const MemoizedRow = React.memo(Row);
+
+export { MemoizedRow as Row };

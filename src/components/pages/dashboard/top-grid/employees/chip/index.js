@@ -12,4 +12,6 @@ Chip.propTypes = {
     children: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
-export { Chip };
+const Memoized = React.memo(Chip);
+
+export { Memoized as Chip };
