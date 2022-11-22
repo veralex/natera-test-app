@@ -14,7 +14,7 @@
         "react-responsive": "8.1.0",
         "react-router-carousel": "0.1.1",
         "react-router-dom": "^5.2.0",
-        "react-scripts": "3.4.1",
+        "react-scripts": "5.0.1",
         "react-switch": "^5.0.1",
         "rodal": "^1.8.1",
         "styled-components": "^5.1.1"
